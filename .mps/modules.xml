@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MPSProject">
+    <projectModules>
+      <modulePath path="$PROJECT_DIR$/languages/de.neumanntim.reqdoc.sandbox/de.neumanntim.reqdoc.sandbox.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/de.neumanntim.reqdoc/de.neumanntim.reqdoc.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/reqdoc.build/reqdoc.build.msd" folder="" />
+    </projectModules>
+  </component>
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/reqdoc.iml" filepath="$PROJECT_DIR$/.idea/reqdoc.iml" />
+    </modules>
+  </component>
+</project>
