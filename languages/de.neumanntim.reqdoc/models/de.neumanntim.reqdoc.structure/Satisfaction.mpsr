@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model ref="r:42060899-e009-41eb-8eaf-ea5dc2a669a2(de.neumanntim.reqdoc.structure)" content="root">
+  <persistence version="9" />
+  <imports />
+  <registry>
+    <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
+      <concept id="3348158742936976480" name="jetbrains.mps.lang.structure.structure.EnumerationMemberDeclaration" flags="ng" index="25R33">
+        <property id="1421157252384165432" name="memberId" index="3tVfz5" />
+        <property id="672037151186491528" name="presentation" index="1L1pqM" />
+      </concept>
+      <concept id="3348158742936976479" name="jetbrains.mps.lang.structure.structure.EnumerationDeclaration" flags="ng" index="25R3W">
+        <reference id="1075010451642646892" name="defaultMember" index="1H5jkz" />
+        <child id="3348158742936976577" name="members" index="25R1y" />
+      </concept>
+      <concept id="1082978164218" name="jetbrains.mps.lang.structure.structure.DataTypeDeclaration" flags="ng" index="AxPO6">
+        <property id="7791109065626895363" name="datatypeId" index="3F6X1D" />
+      </concept>
+    </language>
+    <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
+      </concept>
+      <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
+        <property id="1169194664001" name="name" index="TrG5h" />
+      </concept>
+    </language>
+  </registry>
+  <node concept="25R3W" id="1rfxanqauxk">
+    <property role="3F6X1D" value="1643678236878170196" />
+    <property role="3GE5qa" value="req.data.satisfaction" />
+    <property role="TrG5h" value="Satisfaction" />
+    <ref role="1H5jkz" node="1rfxanqauxp" resolve="neutral" />
+    <node concept="25R33" id="1rfxanqauxl" role="25R1y">
+      <property role="3tVfz5" value="1643678236878170197" />
+      <property role="TrG5h" value="like" />
+      <property role="1L1pqM" value="++ (I like it)" />
+    </node>
+    <node concept="25R33" id="1rfxanqauxm" role="25R1y">
+      <property role="3tVfz5" value="1643678236878170198" />
+      <property role="TrG5h" value="expect" />
+      <property role="1L1pqM" value="+ (I expect it)" />
+    </node>
+    <node concept="25R33" id="1rfxanqauxp" role="25R1y">
+      <property role="3tVfz5" value="1643678236878170201" />
+      <property role="TrG5h" value="neutral" />
+      <property role="1L1pqM" value="0 (I am neutral)" />
+    </node>
+    <node concept="25R33" id="1rfxanqauxt" role="25R1y">
+      <property role="3tVfz5" value="1643678236878170205" />
+      <property role="TrG5h" value="tolerate" />
+      <property role="1L1pqM" value="- (I tolerate it)" />
+    </node>
+    <node concept="25R33" id="1rfxanqauxy" role="25R1y">
+      <property role="3tVfz5" value="1643678236878170210" />
+      <property role="TrG5h" value="dislike" />
+      <property role="1L1pqM" value="-- (I dislike it)" />
+    </node>
+  </node>
+</model>
+

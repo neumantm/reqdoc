@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model ref="r:79a08358-5691-4078-9508-9ceaf8fea91f(de.neumanntim.reqdoc.typesystem)" content="root">
+  <persistence version="9" />
+  <imports>
+    <import index="guj1" ref="r:42060899-e009-41eb-8eaf-ea5dc2a669a2(de.neumanntim.reqdoc.structure)" implicit="true" />
+    <import index="o2c4" ref="r:e5aead29-37fc-4638-8471-1a6398161ea6(de.neumanntim.reqdoc.behavior)" implicit="true" />
+  </imports>
+  <registry>
+    <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
+      <concept id="1215693861676" name="jetbrains.mps.baseLanguage.structure.BaseAssignmentExpression" flags="nn" index="d038R">
+        <child id="1068498886297" name="rValue" index="37vLTx" />
+        <child id="1068498886295" name="lValue" index="37vLTJ" />
+      </concept>
+      <concept id="1197027756228" name="jetbrains.mps.baseLanguage.structure.DotExpression" flags="nn" index="2OqwBi">
+        <child id="1197027771414" name="operand" index="2Oq$k0" />
+        <child id="1197027833540" name="operation" index="2OqNvi" />
+      </concept>
+      <concept id="1137021947720" name="jetbrains.mps.baseLanguage.structure.ConceptFunction" flags="in" index="2VMwT0">
+        <child id="1137022507850" name="body" index="2VODD2" />
+      </concept>
+      <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
+        <property id="1070475926801" name="value" index="Xl_RC" />
+      </concept>
+      <concept id="1068498886294" name="jetbrains.mps.baseLanguage.structure.AssignmentExpression" flags="nn" index="37vLTI" />
+      <concept id="1068580123155" name="jetbrains.mps.baseLanguage.structure.ExpressionStatement" flags="nn" index="3clFbF">
+        <child id="1068580123156" name="expression" index="3clFbG" />
+      </concept>
+      <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
+        <child id="1068581517665" name="statement" index="3cqZAp" />
+      </concept>
+      <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ng" index="1ndlxa">
+        <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
+      </concept>
+    </language>
+    <language id="7a5dda62-9140-4668-ab76-d5ed1746f2b2" name="jetbrains.mps.lang.typesystem">
+      <concept id="1216383170661" name="jetbrains.mps.lang.typesystem.structure.TypesystemQuickFix" flags="ng" index="Q5z_Y">
+        <child id="1216383424566" name="executeBlock" index="Q6x$H" />
+        <child id="1216383476350" name="quickFixArgument" index="Q6Id_" />
+        <child id="1216391046856" name="descriptionBlock" index="QzAvj" />
+      </concept>
+      <concept id="1216383287005" name="jetbrains.mps.lang.typesystem.structure.QuickFixExecuteBlock" flags="in" index="Q5ZZ6" />
+      <concept id="1216383482742" name="jetbrains.mps.lang.typesystem.structure.QuickFixArgument" flags="ng" index="Q6JDH">
+        <child id="1216383511839" name="argumentType" index="Q6QK4" />
+      </concept>
+      <concept id="1216390348809" name="jetbrains.mps.lang.typesystem.structure.QuickFixArgumentReference" flags="nn" index="QwW4i">
+        <reference id="1216390348810" name="quickFixArgument" index="QwW4h" />
+      </concept>
+      <concept id="1216390987552" name="jetbrains.mps.lang.typesystem.structure.QuickFixDescriptionBlock" flags="in" index="QznSV" />
+    </language>
+    <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
+      <concept id="1179409122411" name="jetbrains.mps.lang.smodel.structure.Node_ConceptMethodCall" flags="nn" index="2qgKlT" />
+      <concept id="2644386474300074836" name="jetbrains.mps.lang.smodel.structure.ConceptIdRefExpression" flags="nn" index="35c_gC">
+        <reference id="2644386474300074837" name="conceptDeclaration" index="35c_gD" />
+      </concept>
+      <concept id="1138055754698" name="jetbrains.mps.lang.smodel.structure.SNodeType" flags="in" index="3Tqbb2">
+        <reference id="1138405853777" name="concept" index="ehGHo" />
+      </concept>
+      <concept id="1138056022639" name="jetbrains.mps.lang.smodel.structure.SPropertyAccess" flags="nn" index="3TrcHB">
+        <reference id="1138056395725" name="property" index="3TsBF5" />
+      </concept>
+    </language>
+    <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
+        <property id="1169194664001" name="name" index="TrG5h" />
+      </concept>
+    </language>
+  </registry>
+  <node concept="Q5z_Y" id="4mUjq4WsJx$">
+    <property role="TrG5h" value="fix_generateNewRequirementId" />
+    <node concept="Q5ZZ6" id="4mUjq4WsJx_" role="Q6x$H">
+      <node concept="3clFbS" id="4mUjq4WsJxA" role="2VODD2">
+        <node concept="3clFbF" id="4mUjq4WsKxT" role="3cqZAp">
+          <node concept="37vLTI" id="4mUjq4WsLE_" role="3clFbG">
+            <node concept="2OqwBi" id="4mUjq4WsM99" role="37vLTx">
+              <node concept="35c_gC" id="4mUjq4WsLLe" role="2Oq$k0">
+                <ref role="35c_gD" to="guj1:4mUjq4Wq38s" resolve="Requirement" />
+              </node>
+              <node concept="2qgKlT" id="4mUjq4WsMqt" role="2OqNvi">
+                <ref role="37wK5l" to="o2c4:4mUjq4WqQle" resolve="generateRandomId" />
+              </node>
+            </node>
+            <node concept="2OqwBi" id="4mUjq4WsKY8" role="37vLTJ">
+              <node concept="QwW4i" id="4mUjq4WsKNL" role="2Oq$k0">
+                <ref role="QwW4h" node="4mUjq4WsJEQ" resolve="requirement" />
+              </node>
+              <node concept="3TrcHB" id="4mUjq4WsL8e" role="2OqNvi">
+                <ref role="3TsBF5" to="guj1:4mUjq4Wqtdr" resolve="id" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="Q6JDH" id="4mUjq4WsJEQ" role="Q6Id_">
+      <property role="TrG5h" value="requirement" />
+      <node concept="3Tqbb2" id="4mUjq4WsJEW" role="Q6QK4">
+        <ref role="ehGHo" to="guj1:4mUjq4Wq38s" resolve="Requirement" />
+      </node>
+    </node>
+    <node concept="QznSV" id="4mUjq4WsJF5" role="QzAvj">
+      <node concept="3clFbS" id="4mUjq4WsJF6" role="2VODD2">
+        <node concept="3clFbF" id="4mUjq4WsJLn" role="3cqZAp">
+          <node concept="Xl_RD" id="4mUjq4WsJLm" role="3clFbG">
+            <property role="Xl_RC" value="Re-Generates the requirement id. Attention, this is a bad idea if the requirement was already distributed." />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</model>
+

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model ref="r:211d79c3-f554-4b0a-bf38-b4756821ea05(de.neumanntim.reqdoc.constraints)">
+<model ref="r:211d79c3-f554-4b0a-bf38-b4756821ea05(de.neumanntim.reqdoc.constraints)" content="header">
   <persistence version="9" />
   <languages>
     <use id="5dae8159-ab99-46bb-a40d-0cee30ee7018" name="jetbrains.mps.lang.constraints.rules.kinds" version="0" />
@@ -13,7 +13,11 @@
     <use id="ad93155d-79b2-4759-b10c-55123e763903" name="jetbrains.mps.lang.messages" version="0" />
     <devkit ref="00000000-0000-4000-0000-5604ebd4f22c(jetbrains.mps.devkit.aspect.constraints)" />
   </languages>
-  <imports />
-  <registry />
+  <imports>
+    <import index="o8zo" ref="r:314576fc-3aee-4386-a0a5-a38348ac317d(jetbrains.mps.scope)" />
+    <import index="guj1" ref="r:42060899-e009-41eb-8eaf-ea5dc2a669a2(de.neumanntim.reqdoc.structure)" implicit="true" />
+    <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
+    <import index="o2c4" ref="r:e5aead29-37fc-4638-8471-1a6398161ea6(de.neumanntim.reqdoc.behavior)" implicit="true" />
+  </imports>
 </model>
 
