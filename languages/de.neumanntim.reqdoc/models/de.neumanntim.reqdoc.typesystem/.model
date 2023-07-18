@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model ref="r:79a08358-5691-4078-9508-9ceaf8fea91f(de.neumanntim.reqdoc.typesystem)" content="header">
+  <persistence version="9" />
+  <languages>
+    <use id="7a5dda62-9140-4668-ab76-d5ed1746f2b2" name="jetbrains.mps.lang.typesystem" version="5" />
+    <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
+  </languages>
+  <imports>
+    <import index="guj1" ref="r:42060899-e009-41eb-8eaf-ea5dc2a669a2(de.neumanntim.reqdoc.structure)" implicit="true" />
+    <import index="o2c4" ref="r:e5aead29-37fc-4638-8471-1a6398161ea6(de.neumanntim.reqdoc.behavior)" implicit="true" />
+  </imports>
+</model>
+
