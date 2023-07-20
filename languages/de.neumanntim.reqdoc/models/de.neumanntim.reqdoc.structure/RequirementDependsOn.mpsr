@@ -29,8 +29,8 @@
   <node concept="1TIwiD" id="1rfxanqfova">
     <property role="EcuMT" value="1643678236879456202" />
     <property role="3GE5qa" value="req.data.relations" />
-    <property role="TrG5h" value="RequirementPreCondition" />
-    <property role="34LRSv" value="preCondition" />
+    <property role="TrG5h" value="RequirementDependsOn" />
+    <property role="34LRSv" value="dependsOn" />
     <property role="R4oN_" value="Requirements that need to be fulfilled for this one to make sense" />
     <ref role="1TJDcQ" node="1rfxanqccTJ" resolve="RequirementList" />
     <node concept="PrWs8" id="1rfxanqfpH4" role="PzmwI">

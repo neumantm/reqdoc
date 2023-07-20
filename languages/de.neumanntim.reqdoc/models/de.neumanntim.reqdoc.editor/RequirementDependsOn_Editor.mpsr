@@ -37,7 +37,7 @@
   </registry>
   <node concept="24kQdi" id="1rfxanqfpnK">
     <property role="3GE5qa" value="req.data.relations" />
-    <ref role="1XX52x" to="guj1:1rfxanqfova" resolve="RequirementPreCondition" />
+    <ref role="1XX52x" to="guj1:1rfxanqfova" resolve="RequirementDependsOn" />
     <node concept="3EZMnI" id="1rfxanqfpza" role="2wV5jI">
       <node concept="PMmxH" id="1rfxanqfpzb" role="3EZMnx">
         <ref role="PMmxG" node="1rfxanq65ZU" resolve="RequirementData_EC" />
