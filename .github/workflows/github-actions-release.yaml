@@ -8,7 +8,7 @@ on:
       - '*.*.*'
 
 env:
-  LANGUAGE_NAME: "reqdoc"
+  LANGUAGE_NAME: "de.neumanntim.reqdoc"
 
 jobs:
   call-build-workflow:

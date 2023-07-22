@@ -4,7 +4,7 @@
     <projectModules>
       <modulePath path="$PROJECT_DIR$/languages/de.neumanntim.reqdoc.sandbox/de.neumanntim.reqdoc.sandbox.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/de.neumanntim.reqdoc/de.neumanntim.reqdoc.mpl" folder="" />
-      <modulePath path="$PROJECT_DIR$/solutions/reqdoc.build/reqdoc.build.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/de.neumanntim.reqdoc.build/de.neumanntim.reqdoc.build.msd" folder="" />
     </projectModules>
   </component>
   <component name="ProjectModuleManager">
