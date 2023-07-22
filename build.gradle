@@ -3,7 +3,8 @@
  */
 
 ext.mpsVersion = "2022.2"
-ext.languageName = "reqdoc"
+ext.languageName = "de.neumanntim.reqdoc"
+ext.pluginName = "de.neumanntim.reqdoc"
 
 ext.gradleScriptsRepoUrl = "https://github.com/neumantm/mps-gradle-scripts/raw/main"
 
@@ -21,8 +22,7 @@ ext.mpsPlugins = []
 
 // add plugins from custom URLs (which are not available in JetBrains' plugin repository)
 ext.customMpsPlugins = [
-        "de.itemis.mps.extensions": "https://artifacts.itemis.cloud/repository/maven-mps/de/itemis/mps/extensions/2022.2.2564.8e14a44/extensions-2022.2.2564.8e14a44.zip",
-        "mps-markdown": "https://github.com/neumantm/mps-markdown/releases/download/v0.1.1/mps-markdown.zip"
+        "de.neumanntim.mps.markdown": "https://github.com/neumantm/mps-markdown/releases/download/v0.1.3/de.neumanntim.mps.markdown.zip"
 ]
 
 apply from: 'gradle/init-gradle-scripts.gradle'

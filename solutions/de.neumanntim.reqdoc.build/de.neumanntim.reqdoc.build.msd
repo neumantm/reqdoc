@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<solution name="reqdoc.build" uuid="e090f264-a91e-4997-9b24-4bab6fc94e53" moduleVersion="0" compileInMPS="true">
+<solution name="de.neumanntim.reqdoc.build" uuid="e090f264-a91e-4997-9b24-4bab6fc94e53" moduleVersion="0" compileInMPS="true">
   <models>
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />
@@ -13,6 +13,7 @@
   <sourcePath />
   <dependencies>
     <dependency reexport="false">422c2909-59d6-41a9-b318-40e6256b250f(jetbrains.mps.ide.build)</dependency>
+    <dependency reexport="false">82b026ec-521a-41ab-9d6e-7ca53ee958e9(de.neumanntim.mps.markdown.build)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:798100da-4f0a-421a-b991-71f8c50ce5d2:jetbrains.mps.build" version="0" />
@@ -20,8 +21,9 @@
     <language slang="l:ceab5195-25ea-4f22-9b92-103b95ca8c0c:jetbrains.mps.lang.core" version="2" />
   </languageVersions>
   <dependencyVersions>
+    <module reference="82b026ec-521a-41ab-9d6e-7ca53ee958e9(de.neumanntim.mps.markdown.build)" version="0" />
+    <module reference="e090f264-a91e-4997-9b24-4bab6fc94e53(de.neumanntim.reqdoc.build)" version="0" />
     <module reference="422c2909-59d6-41a9-b318-40e6256b250f(jetbrains.mps.ide.build)" version="0" />
-    <module reference="e090f264-a91e-4997-9b24-4bab6fc94e53(reqdoc.build)" version="0" />
   </dependencyVersions>
 </solution>
 
