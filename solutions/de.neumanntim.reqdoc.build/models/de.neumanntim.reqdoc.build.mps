@@ -99,6 +99,9 @@
       <concept id="1500819558095907805" name="jetbrains.mps.build.mps.structure.BuildMps_Group" flags="ng" index="2G$12M">
         <child id="1500819558095907806" name="modules" index="2G$12L" />
       </concept>
+      <concept id="8971171305100238972" name="jetbrains.mps.build.mps.structure.BuildMps_ModuleDependencyTargetLanguage" flags="ng" index="Rbm2T">
+        <reference id="3189788309731922643" name="language" index="1E1Vl2" />
+      </concept>
       <concept id="868032131020265945" name="jetbrains.mps.build.mps.structure.BuildMPSPlugin" flags="ng" index="3b7kt6" />
       <concept id="5253498789149381388" name="jetbrains.mps.build.mps.structure.BuildMps_Module" flags="ng" index="3bQrTs">
         <child id="5253498789149547825" name="sources" index="3bR31x" />
@@ -323,6 +326,88 @@
         <node concept="1SiIV0" id="7Q92fbITeVS" role="3bR37C">
           <node concept="1Busua" id="7Q92fbITeVT" role="1SiIV1">
             <ref role="1Busuk" to="v07g:2ombABepQet" resolve="de.neumanntim.mps.markdown" />
+          </node>
+        </node>
+      </node>
+      <node concept="1E1JtD" id="5wdxWOP43VF" role="2G$12L">
+        <property role="BnDLt" value="true" />
+        <property role="TrG5h" value="de.neumanntim.reqdoc.toMarkdown" />
+        <property role="3LESm3" value="02381b54-7e38-41fd-9559-ad56639cedea" />
+        <node concept="55IIr" id="5wdxWOP43VI" role="3LF7KH">
+          <node concept="2Ry0Ak" id="5wdxWOP43Wx" role="iGT6I">
+            <property role="2Ry0Am" value="languages" />
+            <node concept="2Ry0Ak" id="5wdxWOP43WC" role="2Ry0An">
+              <property role="2Ry0Am" value="de.neumanntim.reqdoc.toMarkdown" />
+              <node concept="2Ry0Ak" id="5wdxWOP43WH" role="2Ry0An">
+                <property role="2Ry0Am" value="de.neumanntim.reqdoc.toMarkdown.mpl" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="5wdxWOP43Xa" role="3bR37C">
+          <node concept="3bR9La" id="5wdxWOP43Xb" role="1SiIV1">
+            <ref role="3bR37D" node="3TakPfpeVHI" resolve="de.neumanntim.reqdoc" />
+          </node>
+        </node>
+        <node concept="1BupzO" id="5wdxWOP43Xo" role="3bR31x">
+          <property role="3ZfqAx" value="models" />
+          <property role="1Hdu6h" value="true" />
+          <property role="1HemKv" value="true" />
+          <node concept="3LXTmp" id="5wdxWOP43Xp" role="1HemKq">
+            <node concept="398BVA" id="5wdxWOP43Xc" role="3LXTmr">
+              <ref role="398BVh" node="3TakPfpeVID" resolve="project_home" />
+              <node concept="2Ry0Ak" id="5wdxWOP43Xd" role="iGT6I">
+                <property role="2Ry0Am" value="languages" />
+                <node concept="2Ry0Ak" id="5wdxWOP43Xe" role="2Ry0An">
+                  <property role="2Ry0Am" value="de.neumanntim.reqdoc.toMarkdown" />
+                  <node concept="2Ry0Ak" id="5wdxWOP43Xf" role="2Ry0An">
+                    <property role="2Ry0Am" value="models" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3qWCbU" id="5wdxWOP43Xq" role="3LXTna">
+              <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
+            </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="5wdxWOP43Xr" role="3bR37C">
+          <node concept="Rbm2T" id="5wdxWOP43Xs" role="1SiIV1">
+            <ref role="1E1Vl2" to="v07g:2ombABepQet" resolve="de.neumanntim.mps.markdown" />
+          </node>
+        </node>
+        <node concept="1yeLz9" id="5wdxWOP43Xt" role="1TViLv">
+          <property role="TrG5h" value="de.neumanntim.reqdoc.toMarkdown.generator" />
+          <property role="3LESm3" value="00cbe0ef-5bda-4cb6-8200-aee40ce3e085" />
+          <node concept="1SiIV0" id="5wdxWOP43Xu" role="3bR37C">
+            <node concept="3bR9La" id="5wdxWOP43Xv" role="1SiIV1">
+              <ref role="3bR37D" node="3TakPfpeVHI" resolve="de.neumanntim.reqdoc" />
+            </node>
+          </node>
+          <node concept="1BupzO" id="5wdxWOP43XJ" role="3bR31x">
+            <property role="3ZfqAx" value="generator/templates" />
+            <property role="1Hdu6h" value="true" />
+            <property role="1HemKv" value="true" />
+            <node concept="3LXTmp" id="5wdxWOP43XK" role="1HemKq">
+              <node concept="398BVA" id="5wdxWOP43Xw" role="3LXTmr">
+                <ref role="398BVh" node="3TakPfpeVID" resolve="project_home" />
+                <node concept="2Ry0Ak" id="5wdxWOP43Xx" role="iGT6I">
+                  <property role="2Ry0Am" value="languages" />
+                  <node concept="2Ry0Ak" id="5wdxWOP43Xy" role="2Ry0An">
+                    <property role="2Ry0Am" value="de.neumanntim.reqdoc.toMarkdown" />
+                    <node concept="2Ry0Ak" id="5wdxWOP43Xz" role="2Ry0An">
+                      <property role="2Ry0Am" value="generator" />
+                      <node concept="2Ry0Ak" id="5wdxWOP43X$" role="2Ry0An">
+                        <property role="2Ry0Am" value="templates" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3qWCbU" id="5wdxWOP43XL" role="3LXTna">
+                <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
+              </node>
+            </node>
           </node>
         </node>
       </node>
