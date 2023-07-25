@@ -11,8 +11,9 @@
     <import index="5wn5" ref="r:4228e0f7-a566-4a5f-b0b7-5d4704b6836e(de.neumanntim.reqdoc.util)" />
     <import index="guj1" ref="r:42060899-e009-41eb-8eaf-ea5dc2a669a2(de.neumanntim.reqdoc.structure)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
-    <import index="tpco" ref="r:00000000-0000-4000-0000-011c89590284(jetbrains.mps.lang.core.editor)" implicit="true" />
     <import index="tssw" ref="r:6f7091ee-959a-4926-87bf-1fe4d69c6a3c(de.neumanntim.mps.markdown.editor)" implicit="true" />
+    <import index="tpco" ref="r:00000000-0000-4000-0000-011c89590284(jetbrains.mps.lang.core.editor)" implicit="true" />
+    <import index="o2c4" ref="r:e5aead29-37fc-4638-8471-1a6398161ea6(de.neumanntim.reqdoc.behavior)" implicit="true" />
   </imports>
 </model>
 
