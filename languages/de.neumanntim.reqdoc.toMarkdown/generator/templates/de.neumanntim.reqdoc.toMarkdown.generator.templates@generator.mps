@@ -180,6 +180,7 @@
         <child id="2744432054898366121" name="elements" index="3CvVz0" />
       </concept>
       <concept id="2744432054898362395" name="de.neumanntim.mps.markdown.structure.MdFile" flags="ng" index="3CvUpM">
+        <property id="8463705527756327995" name="path" index="3c61dI" />
         <property id="7883678983683226252" name="givenName" index="1cNGV8" />
       </concept>
       <concept id="2744432054898367008" name="de.neumanntim.mps.markdown.structure.MdLine" flags="ng" index="3CvVh9">
@@ -515,6 +516,7 @@
   </node>
   <node concept="3CvUpM" id="5wdxWOOUTsp">
     <property role="1cNGV8" value="root_requirement" />
+    <property role="3c61dI" value="md/reqs" />
     <node concept="n94m4" id="5wdxWOOUTsq" role="lGtFl">
       <ref role="n9lRv" to="guj1:4mUjq4Wq38s" resolve="Requirement" />
     </node>
@@ -2116,6 +2118,7 @@
   </node>
   <node concept="3CvUpM" id="5wdxWOP254i">
     <property role="1cNGV8" value="origins" />
+    <property role="3c61dI" value="md" />
     <node concept="n94m4" id="5wdxWOP254j" role="lGtFl">
       <ref role="n9lRv" to="guj1:1rfxanq7PfE" resolve="OriginList" />
     </node>
