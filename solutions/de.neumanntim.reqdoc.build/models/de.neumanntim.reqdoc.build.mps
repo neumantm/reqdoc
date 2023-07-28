@@ -328,6 +328,16 @@
             <ref role="1Busuk" to="v07g:2ombABepQet" resolve="de.neumanntim.mps.markdown" />
           </node>
         </node>
+        <node concept="1SiIV0" id="3P6H8l8NKuR" role="3bR37C">
+          <node concept="3bR9La" id="3P6H8l8NKuS" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="3P6H8l8NKuT" role="3bR37C">
+          <node concept="3bR9La" id="3P6H8l8NKuU" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:7Kfy9QB6KYb" resolve="jetbrains.mps.baseLanguage" />
+          </node>
+        </node>
       </node>
       <node concept="1E1JtD" id="5wdxWOP43VF" role="2G$12L">
         <property role="BnDLt" value="true" />
@@ -408,6 +418,16 @@
                 <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
               </node>
             </node>
+          </node>
+          <node concept="1SiIV0" id="3P6H8l8NKvM" role="3bR37C">
+            <node concept="3bR9La" id="3P6H8l8NKvL" role="1SiIV1">
+              <ref role="3bR37D" node="3TakPfpeVIa" resolve="de.neumanntim.reqdoc.generator" />
+            </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="3P6H8l8NSXC" role="3bR37C">
+          <node concept="3bR9La" id="3P6H8l8NSXD" role="1SiIV1">
+            <ref role="3bR37D" node="3TakPfpeVIa" resolve="de.neumanntim.reqdoc.generator" />
           </node>
         </node>
       </node>

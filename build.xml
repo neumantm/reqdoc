@@ -99,8 +99,10 @@
           <module ref="9abaaae2-decf-4e97-bf80-9109e8b759cc(jetbrains.mps.lang.messages.api)" kind="rt" />
           <module ref="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" kind="rt" />
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
+          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="cl" />
           <module ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" kind="cl" />
           <module ref="8200bdbd-274e-492c-a4de-4849bbe9fc7a(de.neumanntim.mps.markdown)" kind="cl" />
+          <module ref="f3061a53-9226-4cc5-a443-f952ceaf5816(jetbrains.mps.baseLanguage)" kind="cl" />
           <module ref="2d3c70e9-aab2-4870-8d8d-6036800e4103(jetbrains.mps.kernel)" kind="cl" />
           <module ref="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" kind="cl" />
           <module ref="a9e4c532-c5f5-4bb7-99ef-42abb73bbb70(jetbrains.mps.lang.descriptor.aspects)" kind="cl" />
@@ -222,6 +224,7 @@
           <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="rt" />
           <module ref="52b81ac7-93fd-4e9e-b972-4995882da6d4(jetbrains.mps.baseLanguage.references.runtime)" kind="rt" />
           <module ref="1386a72f-6713-4c25-83ac-bcf7a9491d61(de.neumanntim.reqdoc)" kind="cl" />
+          <module ref="d4c6c6ed-b5ab-41be-a980-73c4fa94a0b9(de.neumanntim.reqdoc.generator)" kind="cl" />
           <module ref="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" kind="cl" />
           <module ref="a9e4c532-c5f5-4bb7-99ef-42abb73bbb70(jetbrains.mps.lang.descriptor.aspects)" kind="cl" />
         </dependencies>
@@ -259,6 +262,7 @@
           <module ref="d936855b-48da-4812-a8a0-2bfddd633ac4(jetbrains.mps.lang.behavior.runtime)" kind="rt" />
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
           <module ref="1386a72f-6713-4c25-83ac-bcf7a9491d61(de.neumanntim.reqdoc)" kind="cl" />
+          <module ref="d4c6c6ed-b5ab-41be-a980-73c4fa94a0b9(de.neumanntim.reqdoc.generator)" kind="cl" />
           <module ref="02381b54-7e38-41fd-9559-ad56639cedea(de.neumanntim.reqdoc.toMarkdown)" kind="cl" />
         </dependencies>
         <uses>
@@ -407,8 +411,10 @@
           <module ref="9abaaae2-decf-4e97-bf80-9109e8b759cc(jetbrains.mps.lang.messages.api)" kind="rt" />
           <module ref="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" kind="rt" />
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
+          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="cl" />
           <module ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" kind="cl" />
           <module ref="8200bdbd-274e-492c-a4de-4849bbe9fc7a(de.neumanntim.mps.markdown)" kind="cl" />
+          <module ref="f3061a53-9226-4cc5-a443-f952ceaf5816(jetbrains.mps.baseLanguage)" kind="cl" />
           <module ref="2d3c70e9-aab2-4870-8d8d-6036800e4103(jetbrains.mps.kernel)" kind="cl" />
           <module ref="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" kind="cl" />
           <module ref="a9e4c532-c5f5-4bb7-99ef-42abb73bbb70(jetbrains.mps.lang.descriptor.aspects)" kind="cl" />
@@ -530,6 +536,7 @@
           <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="rt" />
           <module ref="52b81ac7-93fd-4e9e-b972-4995882da6d4(jetbrains.mps.baseLanguage.references.runtime)" kind="rt" />
           <module ref="1386a72f-6713-4c25-83ac-bcf7a9491d61(de.neumanntim.reqdoc)" kind="cl" />
+          <module ref="d4c6c6ed-b5ab-41be-a980-73c4fa94a0b9(de.neumanntim.reqdoc.generator)" kind="cl" />
           <module ref="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" kind="cl" />
           <module ref="a9e4c532-c5f5-4bb7-99ef-42abb73bbb70(jetbrains.mps.lang.descriptor.aspects)" kind="cl" />
         </dependencies>
@@ -567,6 +574,7 @@
           <module ref="d936855b-48da-4812-a8a0-2bfddd633ac4(jetbrains.mps.lang.behavior.runtime)" kind="rt" />
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
           <module ref="1386a72f-6713-4c25-83ac-bcf7a9491d61(de.neumanntim.reqdoc)" kind="cl" />
+          <module ref="d4c6c6ed-b5ab-41be-a980-73c4fa94a0b9(de.neumanntim.reqdoc.generator)" kind="cl" />
           <module ref="02381b54-7e38-41fd-9559-ad56639cedea(de.neumanntim.reqdoc.toMarkdown)" kind="cl" />
         </dependencies>
         <uses>
@@ -868,10 +876,13 @@
         <fileset file="${artifacts.mps}/lib/testFramework.jar" />
         <fileset file="${artifacts.mps}/lib/stats.jar" />
         <fileset file="${artifacts.de.neumanntim.mps.markdown}/de.neumanntim.mps.markdown/languages/de.neumanntim.mps.markdown/de.neumanntim.mps.markdown.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.runtime.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.scopes.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.descriptor.aspects.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
       </classpath>
     </javac>
   </target>
@@ -928,7 +939,7 @@
     </javac>
   </target>
   
-  <target name="java.compile.de.neumanntim.reqdoc.toMarkdown" depends="java.compile.de.neumanntim.reqdoc, fetchDependencies">
+  <target name="java.compile.de.neumanntim.reqdoc.toMarkdown" depends="java.compile.de.neumanntim.reqdoc, java.compile.de.neumanntim.reqdoc.generator, fetchDependencies">
     <mkdir dir="${project_home}/languages/de.neumanntim.reqdoc.toMarkdown/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.neumanntim.reqdoc.toMarkdown" />
     <javac destdir="${build.tmp}/java/out/de.neumanntim.reqdoc.toMarkdown" fork="true" encoding="utf8" includeantruntime="false" debug="true">
@@ -963,6 +974,7 @@
         <fileset file="${artifacts.mps}/lib/mps-environment.jar" />
         <fileset file="${artifacts.mps}/lib/mps-project-check.jar" />
         <pathelement path="${build.tmp}/java/out/de.neumanntim.reqdoc" />
+        <pathelement path="${build.tmp}/java/out/de.neumanntim.reqdoc.generator" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset file="${artifacts.mps}/lib/app.jar" />
         <fileset file="${artifacts.mps}/lib/3rd-party-rt.jar" />
@@ -980,7 +992,7 @@
     </javac>
   </target>
   
-  <target name="java.compile.de.neumanntim.reqdoc.toMarkdown.generator" depends="java.compile.de.neumanntim.reqdoc, java.compile.de.neumanntim.reqdoc.toMarkdown, fetchDependencies">
+  <target name="java.compile.de.neumanntim.reqdoc.toMarkdown.generator" depends="java.compile.de.neumanntim.reqdoc, java.compile.de.neumanntim.reqdoc.generator, java.compile.de.neumanntim.reqdoc.toMarkdown, fetchDependencies">
     <mkdir dir="${project_home}/languages/de.neumanntim.reqdoc.toMarkdown/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.neumanntim.reqdoc.toMarkdown.generator" />
     <javac destdir="${build.tmp}/java/out/de.neumanntim.reqdoc.toMarkdown.generator" fork="true" encoding="utf8" includeantruntime="false" debug="true">
@@ -1015,6 +1027,7 @@
         <fileset file="${artifacts.mps}/lib/mps-environment.jar" />
         <fileset file="${artifacts.mps}/lib/mps-project-check.jar" />
         <pathelement path="${build.tmp}/java/out/de.neumanntim.reqdoc" />
+        <pathelement path="${build.tmp}/java/out/de.neumanntim.reqdoc.generator" />
         <pathelement path="${build.tmp}/java/out/de.neumanntim.reqdoc.toMarkdown" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset file="${artifacts.mps}/lib/app.jar" />
