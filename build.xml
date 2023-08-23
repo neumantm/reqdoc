@@ -351,6 +351,224 @@
       <zipfileset file="${basedir}/solutions/de.neumanntim.reqdoc.build/de.neumanntim.reqdoc.build.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-de.neumanntim.reqdoc.build-models" prefix="module/models" />
     </jar>
+    <mkdir dir="${build.tmp}/default/de.neumanntim.reqdoc.prioImport.jar" />
+    <mkdir dir="${build.tmp}/default/de.neumanntim.reqdoc.prioImport.jar/META-INF" />
+    <echoxml file="${build.tmp}/default/de.neumanntim.reqdoc.prioImport.jar/META-INF/module.xml">
+      <module namespace="de.neumanntim.reqdoc.prioImport" type="language" uuid="e97e4014-7e25-4a7a-a225-76abfe6a47ed">
+        <dependencies>
+          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="rt" />
+          <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="rt" />
+          <module ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" kind="rt" />
+          <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="rt" />
+          <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" kind="rt" />
+          <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" kind="rt" />
+          <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" kind="rt" />
+          <module ref="52b81ac7-93fd-4e9e-b972-4995882da6d4(jetbrains.mps.baseLanguage.references.runtime)" kind="rt" />
+          <module ref="d44dab97-aaac-44cb-9745-8a14db674c03(jetbrains.mps.baseLanguage.tuples.runtime)" kind="rt" />
+          <module ref="2d3c70e9-aab2-4870-8d8d-6036800e4103(jetbrains.mps.kernel)" kind="rt" />
+          <module ref="d936855b-48da-4812-a8a0-2bfddd633ac5(jetbrains.mps.lang.behavior.api)" kind="rt" />
+          <module ref="d936855b-48da-4812-a8a0-2bfddd633ac4(jetbrains.mps.lang.behavior.runtime)" kind="rt" />
+          <module ref="8e98f4e2-decf-4e97-bf80-9109e8b759ee(jetbrains.mps.lang.constraints.rules.runtime)" kind="rt" />
+          <module ref="0a98f3e2-decf-4e97-bf80-9109eccc59bb(jetbrains.mps.lang.feedback.problem.rules)" kind="rt" />
+          <module ref="9abaaae2-decf-4e97-bf80-9109e8b759cc(jetbrains.mps.lang.messages.api)" kind="rt" />
+          <module ref="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" kind="rt" />
+          <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
+          <module ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" kind="cl" />
+          <module ref="1386a72f-6713-4c25-83ac-bcf7a9491d61(de.neumanntim.reqdoc)" kind="cl" />
+          <module ref="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" kind="cl" />
+          <module ref="a9e4c532-c5f5-4bb7-99ef-42abb73bbb70(jetbrains.mps.lang.descriptor.aspects)" kind="cl" />
+        </dependencies>
+        <uses>
+          <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
+          <language id="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" />
+          <language id="l:83888646-71ce-4f1c-9c53-c54016f6ad4f:jetbrains.mps.baseLanguage.collections" />
+          <language id="l:f2801650-65d5-424e-bb1b-463a8781b786:jetbrains.mps.baseLanguage.javadoc" />
+          <language id="l:760a0a8c-eabb-4521-8bfd-65db761a9ba3:jetbrains.mps.baseLanguage.logging" />
+          <language id="l:a247e09e-2435-45ba-b8d2-07e93feba96a:jetbrains.mps.baseLanguage.tuples" />
+          <language id="l:63650c59-16c8-498a-99c8-005c7ee9515d:jetbrains.mps.lang.access" />
+          <language id="l:aee9cad2-acd4-4608-aef2-0004f6a1cdbd:jetbrains.mps.lang.actions" />
+          <language id="l:af65afd8-f0dd-4942-87d9-63a55f2a9db1:jetbrains.mps.lang.behavior" />
+          <language id="l:3f4bc5f5-c6c1-4a28-8b10-c83066ffa4a1:jetbrains.mps.lang.constraints" />
+          <language id="l:e51810c5-7308-4642-bcb6-469e61b5dd18:jetbrains.mps.lang.constraints.msg.specification" />
+          <language id="l:47257bf3-78d3-470b-89d9-8c3261a61d15:jetbrains.mps.lang.constraints.rules" />
+          <language id="l:5dae8159-ab99-46bb-a40d-0cee30ee7018:jetbrains.mps.lang.constraints.rules.kinds" />
+          <language id="l:134c38d4-e3af-4d9e-b069-1c7df0a4005d:jetbrains.mps.lang.constraints.rules.skeleton" />
+          <language id="l:3ad5badc-1d9c-461c-b7b1-fa2fcd0a0ae7:jetbrains.mps.lang.context" />
+          <language id="l:ea3159bf-f48e-4720-bde2-86dba75f0d34:jetbrains.mps.lang.context.defs" />
+          <language id="l:f4ad079d-bc71-4ffb-9600-9328705cf998:jetbrains.mps.lang.descriptor" />
+          <language id="l:18bc6592-03a6-4e29-a83a-7ff23bde13ba:jetbrains.mps.lang.editor" />
+          <language id="l:ad93155d-79b2-4759-b10c-55123e763903:jetbrains.mps.lang.messages" />
+          <language id="l:3a13115c-633c-4c5c-bbcc-75c4219e9555:jetbrains.mps.lang.quotation" />
+          <language id="l:982eb8df-2c96-4bd7-9963-11712ea622e5:jetbrains.mps.lang.resources" />
+          <language id="l:b3551702-269c-4f05-ba61-58060cef4292:jetbrains.mps.lang.rulesAndMessages" />
+          <language id="l:d8f591ec-4d86-4af2-9f92-a9e93c803ffa:jetbrains.mps.lang.scopes" />
+          <language id="l:13744753-c81f-424a-9c1b-cf8943bf4e86:jetbrains.mps.lang.sharedConcepts" />
+          <language id="l:7866978e-a0f0-4cc7-81bc-4d213d9375e1:jetbrains.mps.lang.smodel" />
+          <language id="l:c72da2b9-7cce-4447-8389-f407dc1158b7:jetbrains.mps.lang.structure" />
+          <language id="l:c7fb639f-be78-4307-89b0-b5959c3fa8c8:jetbrains.mps.lang.text" />
+          <language id="l:7a5dda62-9140-4668-ab76-d5ed1746f2b2:jetbrains.mps.lang.typesystem" />
+        </uses>
+        <classpath>
+          <entry path="." />
+        </classpath>
+        <sources jar="de.neumanntim.reqdoc.prioImport-src.jar" descriptor="de.neumanntim.reqdoc.prioImport.mpl" />
+      </module>
+    </echoxml>
+    <jar destfile="${build.layout}/de.neumanntim.reqdoc/languages/de.neumanntim.reqdoc/de.neumanntim.reqdoc.prioImport.jar" duplicate="preserve">
+      <fileset dir="${build.tmp}/java/out/de.neumanntim.reqdoc.prioImport" />
+      <fileset dir="${project_home}/languages/de.neumanntim.reqdoc.prioImport/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${build.tmp}/default/de.neumanntim.reqdoc.prioImport.jar" />
+    </jar>
+    <mkdir dir="${build.tmp}/default/de.neumanntim.reqdoc.prioImport-generator.jar" />
+    <mkdir dir="${build.tmp}/default/de.neumanntim.reqdoc.prioImport-generator.jar/META-INF" />
+    <echoxml file="${build.tmp}/default/de.neumanntim.reqdoc.prioImport-generator.jar/META-INF/module.xml">
+      <module namespace="de.neumanntim.reqdoc.prioImport.generator" type="generator" uuid="c92f7714-f5b1-46c4-bea2-4451fd7be202">
+        <dependencies>
+          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="rt" />
+          <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="rt" />
+          <module ref="215c4c45-ba99-49f5-9ab7-4b6901a63cfd(MPS.Generator)" kind="rt" />
+          <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="rt" />
+          <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" kind="rt" />
+          <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" kind="rt" />
+          <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" kind="rt" />
+          <module ref="52b81ac7-93fd-4e9e-b972-4995882da6d4(jetbrains.mps.baseLanguage.references.runtime)" kind="rt" />
+          <module ref="d44dab97-aaac-44cb-9745-8a14db674c03(jetbrains.mps.baseLanguage.tuples.runtime)" kind="rt" />
+          <module ref="d936855b-48da-4812-a8a0-2bfddd633ac5(jetbrains.mps.lang.behavior.api)" kind="rt" />
+          <module ref="d936855b-48da-4812-a8a0-2bfddd633ac4(jetbrains.mps.lang.behavior.runtime)" kind="rt" />
+          <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
+          <module ref="e97e4014-7e25-4a7a-a225-76abfe6a47ed(de.neumanntim.reqdoc.prioImport)" kind="cl" />
+        </dependencies>
+        <uses>
+          <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
+          <language id="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" />
+          <language id="l:83888646-71ce-4f1c-9c53-c54016f6ad4f:jetbrains.mps.baseLanguage.collections" />
+          <language id="l:f2801650-65d5-424e-bb1b-463a8781b786:jetbrains.mps.baseLanguage.javadoc" />
+          <language id="l:760a0a8c-eabb-4521-8bfd-65db761a9ba3:jetbrains.mps.baseLanguage.logging" />
+          <language id="l:a247e09e-2435-45ba-b8d2-07e93feba96a:jetbrains.mps.baseLanguage.tuples" />
+          <language id="l:b401a680-8325-4110-8fd3-84331ff25bef:jetbrains.mps.lang.generator" />
+          <language id="l:d7706f63-9be2-479c-a3da-ae92af1e64d5:jetbrains.mps.lang.generator.generationContext" />
+          <language id="l:289fcc83-6543-41e8-a5ca-768235715ce4:jetbrains.mps.lang.generator.generationParameters" />
+          <language id="l:3a13115c-633c-4c5c-bbcc-75c4219e9555:jetbrains.mps.lang.quotation" />
+          <language id="l:13744753-c81f-424a-9c1b-cf8943bf4e86:jetbrains.mps.lang.sharedConcepts" />
+          <language id="l:7866978e-a0f0-4cc7-81bc-4d213d9375e1:jetbrains.mps.lang.smodel" />
+          <language id="l:c7fb639f-be78-4307-89b0-b5959c3fa8c8:jetbrains.mps.lang.text" />
+        </uses>
+        <classpath>
+          <entry path="." />
+        </classpath>
+        <sources jar="de.neumanntim.reqdoc.prioImport-src.jar" descriptor="de.neumanntim.reqdoc.prioImport.mpl" />
+      </module>
+    </echoxml>
+    <jar destfile="${build.layout}/de.neumanntim.reqdoc/languages/de.neumanntim.reqdoc/de.neumanntim.reqdoc.prioImport-generator.jar" duplicate="preserve">
+      <fileset dir="${build.tmp}/java/out/de.neumanntim.reqdoc.prioImport.generator" />
+      <fileset dir="${project_home}/languages/de.neumanntim.reqdoc.prioImport/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${build.tmp}/default/de.neumanntim.reqdoc.prioImport-generator.jar" />
+    </jar>
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-de.neumanntim.reqdoc.prioImport-models">
+      <fileset dir="${project_home}/languages/de.neumanntim.reqdoc.prioImport/models" includes="**/*.mps, **/*.mpsr, **/.model" />
+    </copyModels>
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-de.neumanntim.reqdoc.prioImport-generator-templates">
+      <fileset dir="${project_home}/languages/de.neumanntim.reqdoc.prioImport/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
+    </copyModels>
+    <jar destfile="${build.layout}/de.neumanntim.reqdoc/languages/de.neumanntim.reqdoc/de.neumanntim.reqdoc.prioImport-src.jar" duplicate="preserve">
+      <fileset dir="${project_home}/languages/de.neumanntim.reqdoc.prioImport/generator/source_gen">
+        <exclude name="**/trace.info" />
+        <exclude name="**/exports" />
+        <exclude name="**/checkpoints" />
+        <exclude name="**/*.mps" />
+      </fileset>
+      <fileset dir="${project_home}/languages/de.neumanntim.reqdoc.prioImport/source_gen">
+        <exclude name="**/trace.info" />
+        <exclude name="**/exports" />
+        <exclude name="**/checkpoints" />
+        <exclude name="**/*.mps" />
+      </fileset>
+      <zipfileset file="${basedir}/languages/de.neumanntim.reqdoc.prioImport/de.neumanntim.reqdoc.prioImport.mpl" prefix="module" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-de.neumanntim.reqdoc.prioImport-models" prefix="module/models" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-de.neumanntim.reqdoc.prioImport-generator-templates" prefix="module/generator/templates" />
+    </jar>
+    <mkdir dir="${build.tmp}/default/com.google.code.gson.jar" />
+    <mkdir dir="${build.tmp}/default/com.google.code.gson.jar/META-INF" />
+    <echoxml file="${build.tmp}/default/com.google.code.gson.jar/META-INF/module.xml">
+      <module namespace="com.google.code.gson" type="solution" uuid="36067c25-85a6-4fba-942b-c7c3dc9a6ef2">
+        <dependencies>
+          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="cl" />
+        </dependencies>
+        <uses />
+        <library jar="../../libs/gson-2.10.1.jar" />
+        <sources jar="." descriptor="com.google.code.gson.msd" />
+      </module>
+    </echoxml>
+    <jar destfile="${build.layout}/de.neumanntim.reqdoc/languages/de.neumanntim.reqdoc/com.google.code.gson.jar" duplicate="preserve">
+      <zipfileset file="${basedir}/solutions/com.google.code.gson/com.google.code.gson.msd" prefix="module" />
+      <fileset dir="${build.tmp}/default/com.google.code.gson.jar" />
+    </jar>
+    <mkdir dir="${build.tmp}/default/de.neumanntim.reqdoc.prioImport.fromJson.jar" />
+    <mkdir dir="${build.tmp}/default/de.neumanntim.reqdoc.prioImport.fromJson.jar/META-INF" />
+    <echoxml file="${build.tmp}/default/de.neumanntim.reqdoc.prioImport.fromJson.jar/META-INF/module.xml">
+      <module namespace="de.neumanntim.reqdoc.prioImport.fromJson" type="solution" uuid="43144f4d-f6ff-4e46-8428-0733922e1fc6">
+        <dependencies>
+          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="rt" />
+          <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="rt" />
+          <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="rt" />
+          <module ref="86441d7a-e194-42da-81a5-2161ec62a379(MPS.Workbench)" kind="rt" />
+          <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" kind="rt" />
+          <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" kind="rt" />
+          <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" kind="rt" />
+          <module ref="52b81ac7-93fd-4e9e-b972-4995882da6d4(jetbrains.mps.baseLanguage.references.runtime)" kind="rt" />
+          <module ref="d44dab97-aaac-44cb-9745-8a14db674c03(jetbrains.mps.baseLanguage.tuples.runtime)" kind="rt" />
+          <module ref="2d3c70e9-aab2-4870-8d8d-6036800e4103(jetbrains.mps.kernel)" kind="rt" />
+          <module ref="d936855b-48da-4812-a8a0-2bfddd633ac5(jetbrains.mps.lang.behavior.api)" kind="rt" />
+          <module ref="d936855b-48da-4812-a8a0-2bfddd633ac4(jetbrains.mps.lang.behavior.runtime)" kind="rt" />
+          <module ref="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" kind="rt" />
+          <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
+          <module ref="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61(MPS.Platform)" kind="cl" />
+          <module ref="36067c25-85a6-4fba-942b-c7c3dc9a6ef2(com.google.code.gson)" kind="cl" />
+          <module ref="1386a72f-6713-4c25-83ac-bcf7a9491d61(de.neumanntim.reqdoc)" kind="cl" />
+          <module ref="e97e4014-7e25-4a7a-a225-76abfe6a47ed(de.neumanntim.reqdoc.prioImport)" kind="cl" />
+        </dependencies>
+        <uses>
+          <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
+          <language id="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" />
+          <language id="l:83888646-71ce-4f1c-9c53-c54016f6ad4f:jetbrains.mps.baseLanguage.collections" />
+          <language id="l:f2801650-65d5-424e-bb1b-463a8781b786:jetbrains.mps.baseLanguage.javadoc" />
+          <language id="l:760a0a8c-eabb-4521-8bfd-65db761a9ba3:jetbrains.mps.baseLanguage.logging" />
+          <language id="l:a247e09e-2435-45ba-b8d2-07e93feba96a:jetbrains.mps.baseLanguage.tuples" />
+          <language id="l:63650c59-16c8-498a-99c8-005c7ee9515d:jetbrains.mps.lang.access" />
+          <language id="l:28f9e497-3b42-4291-aeba-0a1039153ab1:jetbrains.mps.lang.plugin" />
+          <language id="l:ef7bf5ac-d06c-4342-b11d-e42104eb9343:jetbrains.mps.lang.plugin.standalone" />
+          <language id="l:3a13115c-633c-4c5c-bbcc-75c4219e9555:jetbrains.mps.lang.quotation" />
+          <language id="l:7866978e-a0f0-4cc7-81bc-4d213d9375e1:jetbrains.mps.lang.smodel" />
+          <language id="l:c7fb639f-be78-4307-89b0-b5959c3fa8c8:jetbrains.mps.lang.text" />
+        </uses>
+        <classpath>
+          <entry path="." />
+        </classpath>
+        <sources jar="de.neumanntim.reqdoc.prioImport.fromJson-src.jar" descriptor="de.neumanntim.reqdoc.prioImport.fromJson.msd" />
+      </module>
+    </echoxml>
+    <jar destfile="${build.layout}/de.neumanntim.reqdoc/languages/de.neumanntim.reqdoc/de.neumanntim.reqdoc.prioImport.fromJson.jar" duplicate="preserve">
+      <fileset dir="${build.tmp}/java/out/de.neumanntim.reqdoc.prioImport.fromJson" />
+      <fileset dir="${project_home}/solutions/de.neumanntim.reqdoc.prioImport.fromJson/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${build.tmp}/default/de.neumanntim.reqdoc.prioImport.fromJson.jar" />
+    </jar>
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-de.neumanntim.reqdoc.prioImport.fromJson-models">
+      <fileset dir="${project_home}/solutions/de.neumanntim.reqdoc.prioImport.fromJson/models" includes="**/*.mps, **/*.mpsr, **/.model" />
+    </copyModels>
+    <jar destfile="${build.layout}/de.neumanntim.reqdoc/languages/de.neumanntim.reqdoc/de.neumanntim.reqdoc.prioImport.fromJson-src.jar" duplicate="preserve">
+      <fileset dir="${project_home}/solutions/de.neumanntim.reqdoc.prioImport.fromJson/source_gen">
+        <exclude name="**/trace.info" />
+        <exclude name="**/exports" />
+        <exclude name="**/checkpoints" />
+        <exclude name="**/*.mps" />
+      </fileset>
+      <zipfileset file="${basedir}/solutions/de.neumanntim.reqdoc.prioImport.fromJson/de.neumanntim.reqdoc.prioImport.fromJson.msd" prefix="module" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-de.neumanntim.reqdoc.prioImport.fromJson-models" prefix="module/models" />
+    </jar>
+    <mkdir dir="${build.layout}/de.neumanntim.reqdoc/libs" />
+    <copy todir="${build.layout}/de.neumanntim.reqdoc/libs">
+      <fileset file="${project_home}/solutions/com.google.code.gson/libs/gson-2.10.1.jar" />
+    </copy>
     <mkdir dir="${build.tmp}/default/de.neumanntim.reqdoc.zip" />
     <mkdir dir="${build.tmp}/default/de.neumanntim.reqdoc.zip/de.neumanntim.reqdoc" />
     <mkdir dir="${build.tmp}/default/de.neumanntim.reqdoc.zip/de.neumanntim.reqdoc/META-INF" />
@@ -663,7 +881,222 @@
       <zipfileset file="${basedir}/solutions/de.neumanntim.reqdoc.build/de.neumanntim.reqdoc.build.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-de.neumanntim.reqdoc.build-models1" prefix="module/models" />
     </jar>
+    <mkdir dir="${build.tmp}/default/de.neumanntim.reqdoc.prioImport.jar1" />
+    <mkdir dir="${build.tmp}/default/de.neumanntim.reqdoc.prioImport.jar1/META-INF" />
+    <echoxml file="${build.tmp}/default/de.neumanntim.reqdoc.prioImport.jar1/META-INF/module.xml">
+      <module namespace="de.neumanntim.reqdoc.prioImport" type="language" uuid="e97e4014-7e25-4a7a-a225-76abfe6a47ed">
+        <dependencies>
+          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="rt" />
+          <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="rt" />
+          <module ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" kind="rt" />
+          <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="rt" />
+          <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" kind="rt" />
+          <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" kind="rt" />
+          <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" kind="rt" />
+          <module ref="52b81ac7-93fd-4e9e-b972-4995882da6d4(jetbrains.mps.baseLanguage.references.runtime)" kind="rt" />
+          <module ref="d44dab97-aaac-44cb-9745-8a14db674c03(jetbrains.mps.baseLanguage.tuples.runtime)" kind="rt" />
+          <module ref="2d3c70e9-aab2-4870-8d8d-6036800e4103(jetbrains.mps.kernel)" kind="rt" />
+          <module ref="d936855b-48da-4812-a8a0-2bfddd633ac5(jetbrains.mps.lang.behavior.api)" kind="rt" />
+          <module ref="d936855b-48da-4812-a8a0-2bfddd633ac4(jetbrains.mps.lang.behavior.runtime)" kind="rt" />
+          <module ref="8e98f4e2-decf-4e97-bf80-9109e8b759ee(jetbrains.mps.lang.constraints.rules.runtime)" kind="rt" />
+          <module ref="0a98f3e2-decf-4e97-bf80-9109eccc59bb(jetbrains.mps.lang.feedback.problem.rules)" kind="rt" />
+          <module ref="9abaaae2-decf-4e97-bf80-9109e8b759cc(jetbrains.mps.lang.messages.api)" kind="rt" />
+          <module ref="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" kind="rt" />
+          <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
+          <module ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" kind="cl" />
+          <module ref="1386a72f-6713-4c25-83ac-bcf7a9491d61(de.neumanntim.reqdoc)" kind="cl" />
+          <module ref="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" kind="cl" />
+          <module ref="a9e4c532-c5f5-4bb7-99ef-42abb73bbb70(jetbrains.mps.lang.descriptor.aspects)" kind="cl" />
+        </dependencies>
+        <uses>
+          <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
+          <language id="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" />
+          <language id="l:83888646-71ce-4f1c-9c53-c54016f6ad4f:jetbrains.mps.baseLanguage.collections" />
+          <language id="l:f2801650-65d5-424e-bb1b-463a8781b786:jetbrains.mps.baseLanguage.javadoc" />
+          <language id="l:760a0a8c-eabb-4521-8bfd-65db761a9ba3:jetbrains.mps.baseLanguage.logging" />
+          <language id="l:a247e09e-2435-45ba-b8d2-07e93feba96a:jetbrains.mps.baseLanguage.tuples" />
+          <language id="l:63650c59-16c8-498a-99c8-005c7ee9515d:jetbrains.mps.lang.access" />
+          <language id="l:aee9cad2-acd4-4608-aef2-0004f6a1cdbd:jetbrains.mps.lang.actions" />
+          <language id="l:af65afd8-f0dd-4942-87d9-63a55f2a9db1:jetbrains.mps.lang.behavior" />
+          <language id="l:3f4bc5f5-c6c1-4a28-8b10-c83066ffa4a1:jetbrains.mps.lang.constraints" />
+          <language id="l:e51810c5-7308-4642-bcb6-469e61b5dd18:jetbrains.mps.lang.constraints.msg.specification" />
+          <language id="l:47257bf3-78d3-470b-89d9-8c3261a61d15:jetbrains.mps.lang.constraints.rules" />
+          <language id="l:5dae8159-ab99-46bb-a40d-0cee30ee7018:jetbrains.mps.lang.constraints.rules.kinds" />
+          <language id="l:134c38d4-e3af-4d9e-b069-1c7df0a4005d:jetbrains.mps.lang.constraints.rules.skeleton" />
+          <language id="l:3ad5badc-1d9c-461c-b7b1-fa2fcd0a0ae7:jetbrains.mps.lang.context" />
+          <language id="l:ea3159bf-f48e-4720-bde2-86dba75f0d34:jetbrains.mps.lang.context.defs" />
+          <language id="l:f4ad079d-bc71-4ffb-9600-9328705cf998:jetbrains.mps.lang.descriptor" />
+          <language id="l:18bc6592-03a6-4e29-a83a-7ff23bde13ba:jetbrains.mps.lang.editor" />
+          <language id="l:ad93155d-79b2-4759-b10c-55123e763903:jetbrains.mps.lang.messages" />
+          <language id="l:3a13115c-633c-4c5c-bbcc-75c4219e9555:jetbrains.mps.lang.quotation" />
+          <language id="l:982eb8df-2c96-4bd7-9963-11712ea622e5:jetbrains.mps.lang.resources" />
+          <language id="l:b3551702-269c-4f05-ba61-58060cef4292:jetbrains.mps.lang.rulesAndMessages" />
+          <language id="l:d8f591ec-4d86-4af2-9f92-a9e93c803ffa:jetbrains.mps.lang.scopes" />
+          <language id="l:13744753-c81f-424a-9c1b-cf8943bf4e86:jetbrains.mps.lang.sharedConcepts" />
+          <language id="l:7866978e-a0f0-4cc7-81bc-4d213d9375e1:jetbrains.mps.lang.smodel" />
+          <language id="l:c72da2b9-7cce-4447-8389-f407dc1158b7:jetbrains.mps.lang.structure" />
+          <language id="l:c7fb639f-be78-4307-89b0-b5959c3fa8c8:jetbrains.mps.lang.text" />
+          <language id="l:7a5dda62-9140-4668-ab76-d5ed1746f2b2:jetbrains.mps.lang.typesystem" />
+        </uses>
+        <classpath>
+          <entry path="." />
+        </classpath>
+        <sources jar="de.neumanntim.reqdoc.prioImport-src.jar" descriptor="de.neumanntim.reqdoc.prioImport.mpl" />
+      </module>
+    </echoxml>
+    <jar destfile="${build.tmp}/default/de.neumanntim.reqdoc.zip/de.neumanntim.reqdoc/languages/de.neumanntim.reqdoc/de.neumanntim.reqdoc.prioImport.jar" duplicate="preserve">
+      <fileset dir="${build.tmp}/java/out/de.neumanntim.reqdoc.prioImport" />
+      <fileset dir="${project_home}/languages/de.neumanntim.reqdoc.prioImport/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${build.tmp}/default/de.neumanntim.reqdoc.prioImport.jar1" />
+    </jar>
+    <mkdir dir="${build.tmp}/default/de.neumanntim.reqdoc.prioImport-generator.jar1" />
+    <mkdir dir="${build.tmp}/default/de.neumanntim.reqdoc.prioImport-generator.jar1/META-INF" />
+    <echoxml file="${build.tmp}/default/de.neumanntim.reqdoc.prioImport-generator.jar1/META-INF/module.xml">
+      <module namespace="de.neumanntim.reqdoc.prioImport.generator" type="generator" uuid="c92f7714-f5b1-46c4-bea2-4451fd7be202">
+        <dependencies>
+          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="rt" />
+          <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="rt" />
+          <module ref="215c4c45-ba99-49f5-9ab7-4b6901a63cfd(MPS.Generator)" kind="rt" />
+          <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="rt" />
+          <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" kind="rt" />
+          <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" kind="rt" />
+          <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" kind="rt" />
+          <module ref="52b81ac7-93fd-4e9e-b972-4995882da6d4(jetbrains.mps.baseLanguage.references.runtime)" kind="rt" />
+          <module ref="d44dab97-aaac-44cb-9745-8a14db674c03(jetbrains.mps.baseLanguage.tuples.runtime)" kind="rt" />
+          <module ref="d936855b-48da-4812-a8a0-2bfddd633ac5(jetbrains.mps.lang.behavior.api)" kind="rt" />
+          <module ref="d936855b-48da-4812-a8a0-2bfddd633ac4(jetbrains.mps.lang.behavior.runtime)" kind="rt" />
+          <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
+          <module ref="e97e4014-7e25-4a7a-a225-76abfe6a47ed(de.neumanntim.reqdoc.prioImport)" kind="cl" />
+        </dependencies>
+        <uses>
+          <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
+          <language id="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" />
+          <language id="l:83888646-71ce-4f1c-9c53-c54016f6ad4f:jetbrains.mps.baseLanguage.collections" />
+          <language id="l:f2801650-65d5-424e-bb1b-463a8781b786:jetbrains.mps.baseLanguage.javadoc" />
+          <language id="l:760a0a8c-eabb-4521-8bfd-65db761a9ba3:jetbrains.mps.baseLanguage.logging" />
+          <language id="l:a247e09e-2435-45ba-b8d2-07e93feba96a:jetbrains.mps.baseLanguage.tuples" />
+          <language id="l:b401a680-8325-4110-8fd3-84331ff25bef:jetbrains.mps.lang.generator" />
+          <language id="l:d7706f63-9be2-479c-a3da-ae92af1e64d5:jetbrains.mps.lang.generator.generationContext" />
+          <language id="l:289fcc83-6543-41e8-a5ca-768235715ce4:jetbrains.mps.lang.generator.generationParameters" />
+          <language id="l:3a13115c-633c-4c5c-bbcc-75c4219e9555:jetbrains.mps.lang.quotation" />
+          <language id="l:13744753-c81f-424a-9c1b-cf8943bf4e86:jetbrains.mps.lang.sharedConcepts" />
+          <language id="l:7866978e-a0f0-4cc7-81bc-4d213d9375e1:jetbrains.mps.lang.smodel" />
+          <language id="l:c7fb639f-be78-4307-89b0-b5959c3fa8c8:jetbrains.mps.lang.text" />
+        </uses>
+        <classpath>
+          <entry path="." />
+        </classpath>
+        <sources jar="de.neumanntim.reqdoc.prioImport-src.jar" descriptor="de.neumanntim.reqdoc.prioImport.mpl" />
+      </module>
+    </echoxml>
+    <jar destfile="${build.tmp}/default/de.neumanntim.reqdoc.zip/de.neumanntim.reqdoc/languages/de.neumanntim.reqdoc/de.neumanntim.reqdoc.prioImport-generator.jar" duplicate="preserve">
+      <fileset dir="${build.tmp}/java/out/de.neumanntim.reqdoc.prioImport.generator" />
+      <fileset dir="${project_home}/languages/de.neumanntim.reqdoc.prioImport/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${build.tmp}/default/de.neumanntim.reqdoc.prioImport-generator.jar1" />
+    </jar>
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-de.neumanntim.reqdoc.prioImport-models1">
+      <fileset dir="${project_home}/languages/de.neumanntim.reqdoc.prioImport/models" includes="**/*.mps, **/*.mpsr, **/.model" />
+    </copyModels>
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-de.neumanntim.reqdoc.prioImport-generator-templates1">
+      <fileset dir="${project_home}/languages/de.neumanntim.reqdoc.prioImport/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
+    </copyModels>
+    <jar destfile="${build.tmp}/default/de.neumanntim.reqdoc.zip/de.neumanntim.reqdoc/languages/de.neumanntim.reqdoc/de.neumanntim.reqdoc.prioImport-src.jar" duplicate="preserve">
+      <fileset dir="${project_home}/languages/de.neumanntim.reqdoc.prioImport/generator/source_gen">
+        <exclude name="**/trace.info" />
+        <exclude name="**/exports" />
+        <exclude name="**/checkpoints" />
+        <exclude name="**/*.mps" />
+      </fileset>
+      <fileset dir="${project_home}/languages/de.neumanntim.reqdoc.prioImport/source_gen">
+        <exclude name="**/trace.info" />
+        <exclude name="**/exports" />
+        <exclude name="**/checkpoints" />
+        <exclude name="**/*.mps" />
+      </fileset>
+      <zipfileset file="${basedir}/languages/de.neumanntim.reqdoc.prioImport/de.neumanntim.reqdoc.prioImport.mpl" prefix="module" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-de.neumanntim.reqdoc.prioImport-models1" prefix="module/models" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-de.neumanntim.reqdoc.prioImport-generator-templates1" prefix="module/generator/templates" />
+    </jar>
+    <mkdir dir="${build.tmp}/default/com.google.code.gson.jar1" />
+    <mkdir dir="${build.tmp}/default/com.google.code.gson.jar1/META-INF" />
+    <echoxml file="${build.tmp}/default/com.google.code.gson.jar1/META-INF/module.xml">
+      <module namespace="com.google.code.gson" type="solution" uuid="36067c25-85a6-4fba-942b-c7c3dc9a6ef2">
+        <dependencies>
+          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="cl" />
+        </dependencies>
+        <uses />
+        <library jar="../../../../de.neumanntim.reqdoc/libs/gson-2.10.1.jar" />
+        <sources jar="." descriptor="com.google.code.gson.msd" />
+      </module>
+    </echoxml>
+    <jar destfile="${build.tmp}/default/de.neumanntim.reqdoc.zip/de.neumanntim.reqdoc/languages/de.neumanntim.reqdoc/com.google.code.gson.jar" duplicate="preserve">
+      <zipfileset file="${basedir}/solutions/com.google.code.gson/com.google.code.gson.msd" prefix="module" />
+      <fileset dir="${build.tmp}/default/com.google.code.gson.jar1" />
+    </jar>
+    <mkdir dir="${build.tmp}/default/de.neumanntim.reqdoc.prioImport.fromJson.jar1" />
+    <mkdir dir="${build.tmp}/default/de.neumanntim.reqdoc.prioImport.fromJson.jar1/META-INF" />
+    <echoxml file="${build.tmp}/default/de.neumanntim.reqdoc.prioImport.fromJson.jar1/META-INF/module.xml">
+      <module namespace="de.neumanntim.reqdoc.prioImport.fromJson" type="solution" uuid="43144f4d-f6ff-4e46-8428-0733922e1fc6">
+        <dependencies>
+          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="rt" />
+          <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="rt" />
+          <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="rt" />
+          <module ref="86441d7a-e194-42da-81a5-2161ec62a379(MPS.Workbench)" kind="rt" />
+          <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" kind="rt" />
+          <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" kind="rt" />
+          <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" kind="rt" />
+          <module ref="52b81ac7-93fd-4e9e-b972-4995882da6d4(jetbrains.mps.baseLanguage.references.runtime)" kind="rt" />
+          <module ref="d44dab97-aaac-44cb-9745-8a14db674c03(jetbrains.mps.baseLanguage.tuples.runtime)" kind="rt" />
+          <module ref="2d3c70e9-aab2-4870-8d8d-6036800e4103(jetbrains.mps.kernel)" kind="rt" />
+          <module ref="d936855b-48da-4812-a8a0-2bfddd633ac5(jetbrains.mps.lang.behavior.api)" kind="rt" />
+          <module ref="d936855b-48da-4812-a8a0-2bfddd633ac4(jetbrains.mps.lang.behavior.runtime)" kind="rt" />
+          <module ref="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" kind="rt" />
+          <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
+          <module ref="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61(MPS.Platform)" kind="cl" />
+          <module ref="36067c25-85a6-4fba-942b-c7c3dc9a6ef2(com.google.code.gson)" kind="cl" />
+          <module ref="1386a72f-6713-4c25-83ac-bcf7a9491d61(de.neumanntim.reqdoc)" kind="cl" />
+          <module ref="e97e4014-7e25-4a7a-a225-76abfe6a47ed(de.neumanntim.reqdoc.prioImport)" kind="cl" />
+        </dependencies>
+        <uses>
+          <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
+          <language id="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" />
+          <language id="l:83888646-71ce-4f1c-9c53-c54016f6ad4f:jetbrains.mps.baseLanguage.collections" />
+          <language id="l:f2801650-65d5-424e-bb1b-463a8781b786:jetbrains.mps.baseLanguage.javadoc" />
+          <language id="l:760a0a8c-eabb-4521-8bfd-65db761a9ba3:jetbrains.mps.baseLanguage.logging" />
+          <language id="l:a247e09e-2435-45ba-b8d2-07e93feba96a:jetbrains.mps.baseLanguage.tuples" />
+          <language id="l:63650c59-16c8-498a-99c8-005c7ee9515d:jetbrains.mps.lang.access" />
+          <language id="l:28f9e497-3b42-4291-aeba-0a1039153ab1:jetbrains.mps.lang.plugin" />
+          <language id="l:ef7bf5ac-d06c-4342-b11d-e42104eb9343:jetbrains.mps.lang.plugin.standalone" />
+          <language id="l:3a13115c-633c-4c5c-bbcc-75c4219e9555:jetbrains.mps.lang.quotation" />
+          <language id="l:7866978e-a0f0-4cc7-81bc-4d213d9375e1:jetbrains.mps.lang.smodel" />
+          <language id="l:c7fb639f-be78-4307-89b0-b5959c3fa8c8:jetbrains.mps.lang.text" />
+        </uses>
+        <classpath>
+          <entry path="." />
+        </classpath>
+        <sources jar="de.neumanntim.reqdoc.prioImport.fromJson-src.jar" descriptor="de.neumanntim.reqdoc.prioImport.fromJson.msd" />
+      </module>
+    </echoxml>
+    <jar destfile="${build.tmp}/default/de.neumanntim.reqdoc.zip/de.neumanntim.reqdoc/languages/de.neumanntim.reqdoc/de.neumanntim.reqdoc.prioImport.fromJson.jar" duplicate="preserve">
+      <fileset dir="${build.tmp}/java/out/de.neumanntim.reqdoc.prioImport.fromJson" />
+      <fileset dir="${project_home}/solutions/de.neumanntim.reqdoc.prioImport.fromJson/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${build.tmp}/default/de.neumanntim.reqdoc.prioImport.fromJson.jar1" />
+    </jar>
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-de.neumanntim.reqdoc.prioImport.fromJson-models1">
+      <fileset dir="${project_home}/solutions/de.neumanntim.reqdoc.prioImport.fromJson/models" includes="**/*.mps, **/*.mpsr, **/.model" />
+    </copyModels>
+    <jar destfile="${build.tmp}/default/de.neumanntim.reqdoc.zip/de.neumanntim.reqdoc/languages/de.neumanntim.reqdoc/de.neumanntim.reqdoc.prioImport.fromJson-src.jar" duplicate="preserve">
+      <fileset dir="${project_home}/solutions/de.neumanntim.reqdoc.prioImport.fromJson/source_gen">
+        <exclude name="**/trace.info" />
+        <exclude name="**/exports" />
+        <exclude name="**/checkpoints" />
+        <exclude name="**/*.mps" />
+      </fileset>
+      <zipfileset file="${basedir}/solutions/de.neumanntim.reqdoc.prioImport.fromJson/de.neumanntim.reqdoc.prioImport.fromJson.msd" prefix="module" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-de.neumanntim.reqdoc.prioImport.fromJson-models1" prefix="module/models" />
+    </jar>
     <zip destfile="${build.layout}/de.neumanntim.reqdoc.zip">
+      <zipfileset file="${project_home}/solutions/com.google.code.gson/libs/gson-2.10.1.jar" prefix="de.neumanntim.reqdoc/libs" />
       <fileset dir="${build.tmp}/default/de.neumanntim.reqdoc.zip" />
     </zip>
     <echo file="${build.layout}/build.properties">mps.build.number=${mps.build.number}${line.separator}mps.date=${mps.date}${line.separator}mps.build.vcs.number=${mps.build.vcs.number}${line.separator}mps.teamcity.buildConfName=${mps.teamcity.buildConfName}${line.separator}mps.idea.platform.build.number=${mps.idea.platform.build.number}${line.separator}mps.mps.build.counter=${mps.mps.build.counter}${line.separator}mpsBootstrapCore.version.major=${mpsBootstrapCore.version.major}${line.separator}mpsBootstrapCore.version.minor=${mpsBootstrapCore.version.minor}${line.separator}mpsBootstrapCore.version.bugfixNr=${mpsBootstrapCore.version.bugfixNr}${line.separator}mpsBootstrapCore.version.eap=${mpsBootstrapCore.version.eap}${line.separator}mpsBootstrapCore.version=${mpsBootstrapCore.version}</echo>
@@ -680,7 +1113,7 @@
     <delete dir="${build.layout}" />
   </target>
   
-  <target name="compileJava" depends="java.compile.de.neumanntim.reqdoc, java.compile.de.neumanntim.reqdoc.generator, java.compile.de.neumanntim.reqdoc.toMarkdown, java.compile.de.neumanntim.reqdoc.toMarkdown.generator, java.compile.de.neumanntim.reqdoc.build" />
+  <target name="compileJava" depends="java.compile.de.neumanntim.reqdoc, java.compile.de.neumanntim.reqdoc.generator, java.compile.de.neumanntim.reqdoc.toMarkdown, java.compile.de.neumanntim.reqdoc.toMarkdown.generator, java.compile.de.neumanntim.reqdoc.build, java.compile.de.neumanntim.reqdoc.prioImport, java.compile.de.neumanntim.reqdoc.prioImport.generator, java.compile.de.neumanntim.reqdoc.prioImport.fromJson" />
   
   <target name="processResources" />
   
@@ -731,6 +1164,7 @@
       <library file="${artifacts.mps}/languages/editor/jetbrains.mps.ide.editor.jar" />
       <library file="${artifacts.mps}/languages/editor/typesystemIntegration.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.baseLanguage.lightweightdsl.jar" />
+      <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.access.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.actions.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.behavior.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.checkedName.jar" />
@@ -810,10 +1244,15 @@
       <library file="${artifacts.mps}/languages/util/jetbrains.mps.project.jar" />
       <library file="${artifacts.mps}/languages/util/jetbrains.mps.refactoring.jar" />
       <library file="${artifacts.mps}/languages/util/jetbrains.mps.runtime.jar" />
+      <library file="${artifacts.mps}/languages/workbench-stub.jar" />
+      <library file="${artifacts.mps}/languages/workbench/jetbrains.mps.lang.plugin.standalone.jar" />
       <library file="${artifacts.mps}/languages/xml/jetbrains.mps.core.xml.jar" />
       <chunk>
+        <module file="${basedir}/solutions/com.google.code.gson/com.google.code.gson.msd" />
         <module file="${basedir}/languages/de.neumanntim.reqdoc/de.neumanntim.reqdoc.mpl" />
         <module file="${basedir}/solutions/de.neumanntim.reqdoc.build/de.neumanntim.reqdoc.build.msd" />
+        <module file="${basedir}/languages/de.neumanntim.reqdoc.prioImport/de.neumanntim.reqdoc.prioImport.mpl" />
+        <module file="${basedir}/solutions/de.neumanntim.reqdoc.prioImport.fromJson/de.neumanntim.reqdoc.prioImport.fromJson.msd" />
         <module file="${basedir}/languages/de.neumanntim.reqdoc.toMarkdown/de.neumanntim.reqdoc.toMarkdown.mpl" />
       </chunk>
       <jvmargs>
@@ -1060,10 +1499,175 @@
     </javac>
   </target>
   
+  <target name="java.compile.de.neumanntim.reqdoc.prioImport" depends="java.compile.de.neumanntim.reqdoc, fetchDependencies">
+    <mkdir dir="${project_home}/languages/de.neumanntim.reqdoc.prioImport/source_gen" />
+    <mkdir dir="${build.tmp}/java/out/de.neumanntim.reqdoc.prioImport" />
+    <javac destdir="${build.tmp}/java/out/de.neumanntim.reqdoc.prioImport" fork="true" encoding="utf8" includeantruntime="false" debug="true">
+      <compilerarg value="-Xlint:none" />
+      <src>
+        <path location="${project_home}/languages/de.neumanntim.reqdoc.prioImport/source_gen" />
+      </src>
+      <classpath>
+        <fileset file="${artifacts.mps}/lib/mps-core.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-annotations.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-openapi.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-context.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-constraints-runtime.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-problem.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-feedback-api.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-messages-api.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-messages-for-rules.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-behavior-api.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-behavior-runtime.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-closures.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-collections.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-logging.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-references.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-messaging.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor-api.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-persistence.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-generator.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-environment.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-project-check.jar" />
+        <pathelement path="${build.tmp}/java/out/de.neumanntim.reqdoc" />
+        <fileset file="${artifacts.mps}/lib/annotations.jar" />
+        <fileset file="${artifacts.mps}/lib/app.jar" />
+        <fileset file="${artifacts.mps}/lib/3rd-party-rt.jar" />
+        <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/util_rt.jar" />
+        <fileset file="${artifacts.mps}/lib/forms_rt.jar" />
+        <fileset file="${artifacts.mps}/lib/java-impl.jar" />
+        <fileset file="${artifacts.mps}/lib/jps-model.jar" />
+        <fileset file="${artifacts.mps}/lib/testFramework.jar" />
+        <fileset file="${artifacts.mps}/lib/stats.jar" />
+        <fileset file="${artifacts.de.neumanntim.mps.markdown}/de.neumanntim.mps.markdown/languages/de.neumanntim.mps.markdown/de.neumanntim.mps.markdown.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.runtime.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.descriptor.aspects.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
+      </classpath>
+    </javac>
+  </target>
+  
+  <target name="java.compile.de.neumanntim.reqdoc.prioImport.generator" depends="java.compile.de.neumanntim.reqdoc.prioImport, fetchDependencies">
+    <mkdir dir="${project_home}/languages/de.neumanntim.reqdoc.prioImport/generator/source_gen" />
+    <mkdir dir="${build.tmp}/java/out/de.neumanntim.reqdoc.prioImport.generator" />
+    <javac destdir="${build.tmp}/java/out/de.neumanntim.reqdoc.prioImport.generator" fork="true" encoding="utf8" includeantruntime="false" debug="true">
+      <compilerarg value="-Xlint:none" />
+      <src>
+        <path location="${project_home}/languages/de.neumanntim.reqdoc.prioImport/generator/source_gen" />
+      </src>
+      <classpath>
+        <fileset file="${artifacts.mps}/lib/mps-core.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-annotations.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-openapi.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-context.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-constraints-runtime.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-problem.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-feedback-api.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-messages-api.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-messages-for-rules.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-behavior-api.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-behavior-runtime.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-closures.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-collections.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-logging.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-references.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-messaging.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor-api.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-persistence.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-generator.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-environment.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-project-check.jar" />
+        <pathelement path="${build.tmp}/java/out/de.neumanntim.reqdoc.prioImport" />
+        <fileset file="${artifacts.mps}/lib/annotations.jar" />
+        <fileset file="${artifacts.mps}/lib/app.jar" />
+        <fileset file="${artifacts.mps}/lib/3rd-party-rt.jar" />
+        <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/util_rt.jar" />
+        <fileset file="${artifacts.mps}/lib/forms_rt.jar" />
+        <fileset file="${artifacts.mps}/lib/java-impl.jar" />
+        <fileset file="${artifacts.mps}/lib/jps-model.jar" />
+        <fileset file="${artifacts.mps}/lib/testFramework.jar" />
+        <fileset file="${artifacts.mps}/lib/stats.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.runtime.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
+      </classpath>
+    </javac>
+  </target>
+  
+  <target name="java.compile.de.neumanntim.reqdoc.prioImport.fromJson" depends="java.compile.de.neumanntim.reqdoc, java.compile.de.neumanntim.reqdoc.prioImport, fetchDependencies">
+    <mkdir dir="${project_home}/solutions/de.neumanntim.reqdoc.prioImport.fromJson/source_gen" />
+    <mkdir dir="${build.tmp}/java/out/de.neumanntim.reqdoc.prioImport.fromJson" />
+    <javac destdir="${build.tmp}/java/out/de.neumanntim.reqdoc.prioImport.fromJson" fork="true" encoding="utf8" includeantruntime="false" debug="true">
+      <compilerarg value="-Xlint:none" />
+      <src>
+        <path location="${project_home}/solutions/de.neumanntim.reqdoc.prioImport.fromJson/source_gen" />
+      </src>
+      <classpath>
+        <fileset file="${artifacts.mps}/lib/mps-core.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-annotations.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-openapi.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-context.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-constraints-runtime.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-problem.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-feedback-api.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-messages-api.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-messages-for-rules.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-behavior-api.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-behavior-runtime.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-closures.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-collections.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-logging.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-references.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-messaging.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor-api.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-persistence.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-generator.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-environment.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-project-check.jar" />
+        <pathelement path="${build.tmp}/java/out/de.neumanntim.reqdoc" />
+        <pathelement path="${build.tmp}/java/out/de.neumanntim.reqdoc.prioImport" />
+        <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
+        <fileset file="${project_home}/solutions/com.google.code.gson/libs/gson-2.10.1.jar" />
+        <fileset file="${artifacts.mps}/lib/annotations.jar" />
+        <fileset file="${artifacts.mps}/lib/app.jar" />
+        <fileset file="${artifacts.mps}/lib/3rd-party-rt.jar" />
+        <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/util_rt.jar" />
+        <fileset file="${artifacts.mps}/lib/forms_rt.jar" />
+        <fileset file="${artifacts.mps}/lib/java-impl.jar" />
+        <fileset file="${artifacts.mps}/lib/jps-model.jar" />
+        <fileset file="${artifacts.mps}/lib/testFramework.jar" />
+        <fileset file="${artifacts.mps}/lib/stats.jar" />
+        <fileset file="${artifacts.de.neumanntim.mps.markdown}/de.neumanntim.mps.markdown/languages/de.neumanntim.mps.markdown/de.neumanntim.mps.markdown.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.runtime.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
+      </classpath>
+    </javac>
+  </target>
+  
   <target name="cleanSources">
     <delete dir="${project_home}/languages/de.neumanntim.reqdoc/source_gen" />
     <delete dir="${project_home}/solutions/de.neumanntim.reqdoc.build/source_gen" />
     <delete dir="${project_home}/languages/de.neumanntim.reqdoc/generator/source_gen" />
+    <delete dir="${project_home}/languages/de.neumanntim.reqdoc.prioImport/source_gen" />
+    <delete dir="${project_home}/solutions/de.neumanntim.reqdoc.prioImport.fromJson/source_gen" />
+    <delete dir="${project_home}/languages/de.neumanntim.reqdoc.prioImport/generator/source_gen" />
     <delete dir="${project_home}/languages/de.neumanntim.reqdoc.toMarkdown/source_gen" />
     <delete dir="${project_home}/languages/de.neumanntim.reqdoc.toMarkdown/generator/source_gen" />
   </target>

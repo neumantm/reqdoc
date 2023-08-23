@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model ref="r:d7c3c722-d757-4d92-a8ce-1b8963e37f90(de.neumanntim.reqdoc.prioImport.generator.templates@generator)" content="header">
+  <persistence version="9" />
+  <languages>
+    <devkit ref="a2eb3a43-fcc2-4200-80dc-c60110c4862d(jetbrains.mps.devkit.templates)" />
+  </languages>
+  <imports>
+    <import index="2mrb" ref="r:ce4107d2-6016-4480-b2f9-a2acbd1d9049(de.neumanntim.reqdoc.prioImport.structure)" />
+  </imports>
+</model>
+

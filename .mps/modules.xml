@@ -2,10 +2,14 @@
 <project version="4">
   <component name="MPSProject">
     <projectModules>
+      <modulePath path="$PROJECT_DIR$/languages/de.neumanntim.reqdoc.prioImport/de.neumanntim.reqdoc.prioImport.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/de.neumanntim.reqdoc.sandbox/de.neumanntim.reqdoc.sandbox.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/de.neumanntim.reqdoc.toMarkdown/de.neumanntim.reqdoc.toMarkdown.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/de.neumanntim.reqdoc/de.neumanntim.reqdoc.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/com.google.code.gson/com.google.code.gson.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/de.neumanntim.reqdoc.build/de.neumanntim.reqdoc.build.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/de.neumanntim.reqdoc.prioImport.fromJson/de.neumanntim.reqdoc.prioImport.fromJson.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/sandbox2/sandbox2.msd" folder="" />
     </projectModules>
   </component>
   <component name="ProjectModuleManager">
