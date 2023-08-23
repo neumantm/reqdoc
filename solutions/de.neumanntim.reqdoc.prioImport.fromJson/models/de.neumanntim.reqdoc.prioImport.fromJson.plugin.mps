@@ -15,8 +15,10 @@
     <import index="qkt" ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5/java:com.intellij.openapi.actionSystem(MPS.IDEA/)" />
     <import index="8pl4" ref="r:0ef67a5c-a56a-4ba2-8cb9-283a17310a4c(de.neumanntim.reqdoc.prioImport.fromJson.util)" />
     <import index="fnpx" ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5/java:com.intellij.notification(MPS.IDEA/)" />
+    <import index="w1kc" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.smodel(MPS.Core/)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="z1c3" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.project(MPS.Core/)" implicit="true" />
+    <import index="33ny" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util(JDK/)" implicit="true" />
     <import index="tprs" ref="r:00000000-0000-4000-0000-011c895904a4(jetbrains.mps.ide.actions)" implicit="true" />
   </imports>
   <registry>
@@ -27,6 +29,7 @@
       <concept id="1203071646776" name="jetbrains.mps.lang.plugin.structure.ActionDeclaration" flags="ng" index="sE7Ow">
         <property id="1205250923097" name="caption" index="2uzpH1" />
         <property id="7458746815261976739" name="requiredAccess" index="2YLI8m" />
+        <child id="1203083196627" name="updateBlock" index="tmbBb" />
         <child id="1203083461638" name="executeFunction" index="tncku" />
         <child id="1217413222820" name="parameter" index="1NuT2Z" />
       </concept>
@@ -42,6 +45,7 @@
         <reference id="1204992316090" name="point" index="2f8Tey" />
         <reference id="1203092736097" name="modifiedGroup" index="tU$_T" />
       </concept>
+      <concept id="1205681243813" name="jetbrains.mps.lang.plugin.structure.IsApplicableBlock" flags="in" index="2ScWuX" />
       <concept id="5538333046911348654" name="jetbrains.mps.lang.plugin.structure.RequiredCondition" flags="ng" index="1oajcY" />
       <concept id="1217252042208" name="jetbrains.mps.lang.plugin.structure.ActionDataParameterDeclaration" flags="ng" index="1DS2jV">
         <reference id="1217252646389" name="key" index="1DUlNI" />
@@ -85,6 +89,10 @@
       </concept>
       <concept id="1070534058343" name="jetbrains.mps.baseLanguage.structure.NullLiteral" flags="nn" index="10Nm6u" />
       <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
+      <concept id="1070534934090" name="jetbrains.mps.baseLanguage.structure.CastExpression" flags="nn" index="10QFUN">
+        <child id="1070534934091" name="type" index="10QFUM" />
+        <child id="1070534934092" name="expression" index="10QFUP" />
+      </concept>
       <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
         <child id="1068431790190" name="initializer" index="33vP2m" />
       </concept>
@@ -110,15 +118,23 @@
       <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
         <child id="1068581517665" name="statement" index="3cqZAp" />
       </concept>
+      <concept id="1068580123137" name="jetbrains.mps.baseLanguage.structure.BooleanConstant" flags="nn" index="3clFbT">
+        <property id="1068580123138" name="value" index="3clFbU" />
+      </concept>
       <concept id="1068580320020" name="jetbrains.mps.baseLanguage.structure.IntegerConstant" flags="nn" index="3cmrfG">
         <property id="1068580320021" name="value" index="3cmrfH" />
       </concept>
       <concept id="1068581242875" name="jetbrains.mps.baseLanguage.structure.PlusExpression" flags="nn" index="3cpWs3" />
-      <concept id="1068581242878" name="jetbrains.mps.baseLanguage.structure.ReturnStatement" flags="nn" index="3cpWs6" />
+      <concept id="1068581242878" name="jetbrains.mps.baseLanguage.structure.ReturnStatement" flags="nn" index="3cpWs6">
+        <child id="1068581517676" name="expression" index="3cqZAk" />
+      </concept>
       <concept id="1068581242864" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" flags="nn" index="3cpWs8">
         <child id="1068581242865" name="localVariableDeclaration" index="3cpWs9" />
       </concept>
       <concept id="1068581242863" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclaration" flags="nr" index="3cpWsn" />
+      <concept id="1079359253375" name="jetbrains.mps.baseLanguage.structure.ParenthesizedExpression" flags="nn" index="1eOMI4">
+        <child id="1079359253376" name="expression" index="1eOMHV" />
+      </concept>
       <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ng" index="1ndlxa">
         <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
         <child id="1068499141038" name="actualArgument" index="37wK5m" />
@@ -157,6 +173,15 @@
       <concept id="1205752633985" name="jetbrains.mps.baseLanguage.classifiers.structure.ThisClassifierExpression" flags="nn" index="2WthIp" />
       <concept id="1205756064662" name="jetbrains.mps.baseLanguage.classifiers.structure.IMemberOperation" flags="ng" index="2WEnae">
         <reference id="1205756909548" name="member" index="2WH_rO" />
+      </concept>
+    </language>
+    <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
+      <concept id="4497478346159780083" name="jetbrains.mps.lang.smodel.structure.LanguageRefExpression" flags="ng" index="pHN19">
+        <child id="3542851458883491298" name="languageId" index="2V$M_3" />
+      </concept>
+      <concept id="3542851458883438784" name="jetbrains.mps.lang.smodel.structure.LanguageId" flags="nn" index="2V$Bhx">
+        <property id="3542851458883439831" name="namespace" index="2V$B1Q" />
+        <property id="3542851458883439832" name="languageId" index="2V$B1T" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -408,6 +433,98 @@
       <property role="TrG5h" value="mpsProject" />
       <ref role="1DUlNI" to="qq03:~MPSCommonDataKeys.MPS_PROJECT" resolve="MPS_PROJECT" />
       <node concept="1oajcY" id="2fpVXLMUd0H" role="1oa70y" />
+    </node>
+    <node concept="2ScWuX" id="4Oe5hfepcwd" role="tmbBb">
+      <node concept="3clFbS" id="4Oe5hfepcwe" role="2VODD2">
+        <node concept="3J1_TO" id="4Oe5hfeqXpf" role="3cqZAp">
+          <node concept="3uVAMA" id="4Oe5hfer8dC" role="1zxBo5">
+            <node concept="XOnhg" id="4Oe5hfer8dD" role="1zc67B">
+              <property role="TrG5h" value="exception" />
+              <node concept="nSUau" id="4Oe5hfer8dE" role="1tU5fm">
+                <node concept="3uibUv" id="4Oe5hfer8Gp" role="nSUat">
+                  <ref role="3uigEE" to="wyt6:~Exception" resolve="Exception" />
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbS" id="4Oe5hfer8dF" role="1zc67A">
+              <node concept="3clFbF" id="4Oe5hferd$y" role="3cqZAp">
+                <node concept="2YIFZM" id="4Oe5hferd$z" role="3clFbG">
+                  <ref role="37wK5l" to="fnpx:~Notifications$Bus.notify(com.intellij.notification.Notification,com.intellij.openapi.project.Project)" resolve="notify" />
+                  <ref role="1Pybhc" to="fnpx:~Notifications$Bus" resolve="Bus" />
+                  <node concept="2ShNRf" id="4Oe5hferd$$" role="37wK5m">
+                    <node concept="1pGfFk" id="4Oe5hferd$_" role="2ShVmc">
+                      <property role="373rjd" value="true" />
+                      <ref role="37wK5l" to="fnpx:~Notification.&lt;init&gt;(java.lang.String,java.lang.String,java.lang.String,com.intellij.notification.NotificationType)" resolve="Notification" />
+                      <node concept="Xl_RD" id="4Oe5hferd$A" role="37wK5m">
+                        <property role="Xl_RC" value="Priority from JSON Importer" />
+                      </node>
+                      <node concept="Xl_RD" id="4Oe5hferd$B" role="37wK5m">
+                        <property role="Xl_RC" value="Failed to detect whether model uses prioImport language. Assuming yes." />
+                      </node>
+                      <node concept="2OqwBi" id="4Oe5hferd$C" role="37wK5m">
+                        <node concept="37vLTw" id="4Oe5hferd$D" role="2Oq$k0">
+                          <ref role="3cqZAo" node="4Oe5hfer8dD" resolve="exception" />
+                        </node>
+                        <node concept="liA8E" id="4Oe5hferd$E" role="2OqNvi">
+                          <ref role="37wK5l" to="wyt6:~Throwable.getMessage()" resolve="getMessage" />
+                        </node>
+                      </node>
+                      <node concept="Rm8GO" id="4Oe5hferi_B" role="37wK5m">
+                        <ref role="Rm8GQ" to="fnpx:~NotificationType.WARNING" resolve="WARNING" />
+                        <ref role="1Px2BO" to="fnpx:~NotificationType" resolve="NotificationType" />
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="2OqwBi" id="4Oe5hferd$G" role="37wK5m">
+                    <node concept="2WthIp" id="4Oe5hferd$H" role="2Oq$k0" />
+                    <node concept="1DTwFV" id="4Oe5hferd$I" role="2OqNvi">
+                      <ref role="2WH_rO" node="2fpVXLMUayW" resolve="ideaProject" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3cpWs6" id="4Oe5hfer9Gv" role="3cqZAp">
+                <node concept="3clFbT" id="4Oe5hfer9Yv" role="3cqZAk">
+                  <property role="3clFbU" value="true" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbS" id="4Oe5hfeqXph" role="1zxBo7">
+            <node concept="3cpWs6" id="4Oe5hfer7Rc" role="3cqZAp">
+              <node concept="2OqwBi" id="4Oe5hfer509" role="3cqZAk">
+                <node concept="2OqwBi" id="4Oe5hfer2LT" role="2Oq$k0">
+                  <node concept="1eOMI4" id="4Oe5hfeqXJ6" role="2Oq$k0">
+                    <node concept="10QFUN" id="4Oe5hfeqXJ3" role="1eOMHV">
+                      <node concept="3uibUv" id="4Oe5hfeqY7d" role="10QFUM">
+                        <ref role="3uigEE" to="w1kc:~SModelInternal" resolve="SModelInternal" />
+                      </node>
+                      <node concept="2OqwBi" id="4Oe5hfer0hH" role="10QFUP">
+                        <node concept="2WthIp" id="4Oe5hfeqZuJ" role="2Oq$k0" />
+                        <node concept="1DTwFV" id="4Oe5hfer1HK" role="2OqNvi">
+                          <ref role="2WH_rO" node="2fpVXLMTUsi" resolve="model" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="liA8E" id="4Oe5hfer3c0" role="2OqNvi">
+                    <ref role="37wK5l" to="w1kc:~SModelInternal.importedLanguageIds()" resolve="importedLanguageIds" />
+                  </node>
+                </node>
+                <node concept="liA8E" id="4Oe5hfer5Nt" role="2OqNvi">
+                  <ref role="37wK5l" to="33ny:~Collection.contains(java.lang.Object)" resolve="contains" />
+                  <node concept="pHN19" id="4Oe5hfer6rH" role="37wK5m">
+                    <node concept="2V$Bhx" id="4Oe5hfer7v1" role="2V$M_3">
+                      <property role="2V$B1T" value="e97e4014-7e25-4a7a-a225-76abfe6a47ed" />
+                      <property role="2V$B1Q" value="de.neumanntim.reqdoc.prioImport" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
     </node>
   </node>
   <node concept="tC5Ba" id="2fpVXLMUzxi">
