@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model ref="r:2a45d042-d2f9-41bc-a016-b814aac4aa6f(de.neumanntim.reqdoc.prioImport.editor)" content="root">
+  <persistence version="9" />
+  <imports>
+    <import index="2mrb" ref="r:ce4107d2-6016-4480-b2f9-a2acbd1d9049(de.neumanntim.reqdoc.prioImport.structure)" implicit="true" />
+    <import index="tpco" ref="r:00000000-0000-4000-0000-011c89590284(jetbrains.mps.lang.core.editor)" implicit="true" />
+    <import index="guj1" ref="r:42060899-e009-41eb-8eaf-ea5dc2a669a2(de.neumanntim.reqdoc.structure)" implicit="true" />
+  </imports>
+  <registry>
+    <language id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor">
+      <concept id="1071666914219" name="jetbrains.mps.lang.editor.structure.ConceptEditorDeclaration" flags="ig" index="24kQdi" />
+      <concept id="1106270549637" name="jetbrains.mps.lang.editor.structure.CellLayout_Horizontal" flags="nn" index="2iRfu4" />
+      <concept id="1080736578640" name="jetbrains.mps.lang.editor.structure.BaseEditorComponent" flags="ig" index="2wURMF">
+        <child id="1080736633877" name="cellModel" index="2wV5jI" />
+      </concept>
+      <concept id="1078939183254" name="jetbrains.mps.lang.editor.structure.CellModel_Component" flags="sg" stub="3162947552742194261" index="PMmxH">
+        <reference id="1078939183255" name="editorComponent" index="PMmxG" />
+      </concept>
+      <concept id="1088013125922" name="jetbrains.mps.lang.editor.structure.CellModel_RefCell" flags="sg" stub="730538219795941030" index="1iCGBv">
+        <child id="1088186146602" name="editorComponent" index="1sWHZn" />
+      </concept>
+      <concept id="1088185857835" name="jetbrains.mps.lang.editor.structure.InlineEditorComponent" flags="ig" index="1sVBvm" />
+      <concept id="1139848536355" name="jetbrains.mps.lang.editor.structure.CellModel_WithRole" flags="ng" index="1$h60E">
+        <property id="1139852716018" name="noTargetText" index="1$x2rV" />
+        <property id="1140017977771" name="readOnly" index="1Intyy" />
+        <reference id="1140103550593" name="relationDeclaration" index="1NtTu8" />
+      </concept>
+      <concept id="1073389446423" name="jetbrains.mps.lang.editor.structure.CellModel_Collection" flags="sn" stub="3013115976261988961" index="3EZMnI">
+        <child id="1106270802874" name="cellLayout" index="2iSdaV" />
+        <child id="1073389446424" name="childCellModel" index="3EZMnx" />
+      </concept>
+      <concept id="1073389577006" name="jetbrains.mps.lang.editor.structure.CellModel_Constant" flags="sn" stub="3610246225209162225" index="3F0ifn">
+        <property id="1073389577007" name="text" index="3F0ifm" />
+      </concept>
+      <concept id="1073389658414" name="jetbrains.mps.lang.editor.structure.CellModel_Property" flags="sg" stub="730538219796134133" index="3F0A7n" />
+      <concept id="1073389882823" name="jetbrains.mps.lang.editor.structure.CellModel_RefNode" flags="sg" stub="730538219795960754" index="3F1sOY" />
+      <concept id="1166049232041" name="jetbrains.mps.lang.editor.structure.AbstractComponent" flags="ng" index="1XWOmA">
+        <reference id="1166049300910" name="conceptDeclaration" index="1XX52x" />
+      </concept>
+    </language>
+  </registry>
+  <node concept="24kQdi" id="RHDWV4KdXU">
+    <ref role="1XX52x" to="2mrb:RHDWV4Kc4O" resolve="PriorityListEntry" />
+    <node concept="3EZMnI" id="RHDWV4Ke20" role="2wV5jI">
+      <node concept="PMmxH" id="RHDWV4Ke7p" role="3EZMnx">
+        <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
+      </node>
+      <node concept="1iCGBv" id="RHDWV4Kev$" role="3EZMnx">
+        <ref role="1NtTu8" to="2mrb:RHDWV4KcxK" resolve="requirement" />
+        <node concept="1sVBvm" id="RHDWV4KevA" role="1sWHZn">
+          <node concept="3F0A7n" id="RHDWV4Keya" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="guj1:4mUjq4Wqtdr" resolve="id" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="RHDWV4KeZ9" role="3EZMnx">
+        <property role="3F0ifm" value="prio" />
+      </node>
+      <node concept="3F1sOY" id="RHDWV4KTRl" role="3EZMnx">
+        <property role="1$x2rV" value="none" />
+        <ref role="1NtTu8" to="2mrb:RHDWV4KStt" resolve="prio" />
+      </node>
+      <node concept="3F0ifn" id="RHDWV4Kfak" role="3EZMnx">
+        <property role="3F0ifm" value="funcSat" />
+      </node>
+      <node concept="3F1sOY" id="RHDWV4L2LP" role="3EZMnx">
+        <property role="1$x2rV" value="none" />
+        <ref role="1NtTu8" to="2mrb:RHDWV4KTq6" resolve="functionalSatisfaction" />
+      </node>
+      <node concept="3F0ifn" id="RHDWV4Kfk1" role="3EZMnx">
+        <property role="3F0ifm" value="dysfuncSat" />
+      </node>
+      <node concept="3F1sOY" id="RHDWV4KUbr" role="3EZMnx">
+        <property role="1$x2rV" value="none" />
+        <ref role="1NtTu8" to="2mrb:RHDWV4KSEw" resolve="dysfunctionalSatisfaction" />
+      </node>
+      <node concept="2iRfu4" id="RHDWV4Ke23" role="2iSdaV" />
+    </node>
+  </node>
+</model>
+
