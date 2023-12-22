@@ -35,6 +35,11 @@ When you have created or imported all priority lists, you can create a PriorityS
 This PrioritySource then contains a button to apply all priorities to the requirements.
 Attention: This will overwrite the priorities present in these requirements.
 
+### Further Processing
+
+For further processing of the markdown files see [this gist](https://gist.github.com/neumantm/37ef76fe3f542103314aee3aec4612d4).
+
+
 ## Development
 
 To work on this project please use the provided gradle wrapper.
